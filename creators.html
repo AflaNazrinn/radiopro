@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html class="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c025f4",
+                        "accent": "#ccff00",
+                        "background-light": "#f8f5f8",
+                        "background-dark": "#120a14",
+                        "card-dark": "#1e1022",
+                        "brand-purple": "#8c2bee", // Original primary for header/footer consistency
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .outline-text {
+            -webkit-text-stroke: 1px white;
+            color: transparent
+        }
+
+        .grainy-bg {
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuC4yepLYAwASpU2Do0oo99mnFdhUeXPh-djwrwOGPc0dVLvbZmmSGapWCcA8ciZcbXjJNaeEom1YhQfRvHhSOZoLarzcYYnB82o38yRyOKb8AiFasaGPFebmRcqtCcHxKjYz2YFQxZkkjPx1zoxg1MI7vSJfY6TzJPh7-HCSEIc7DbgdRr7h7pPdMLGyKG_gmQMQ2jgu4udtqf1euoa5Kv-8N8JAkacd4UrmXn61sY_f1fdmHkABYD1kNaofmklnFcvk2M025dzkAP4)
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Specific header/footer utility to override the local primary color for consistency */
+        .text-standard-primary {
+            color: #8c2bee;
+        }
+
+        .bg-standard-primary {
+            background-color: #8c2bee;
+        }
+
+        .border-standard-primary {
+            border-color: rgba(140, 43, 238, 0.2);
+        }
+
+        .bg-standard-primary-low {
+            background-color: rgba(140, 43, 238, 0.1);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-white">
+
+    <!-- Top Navigation (Standardized) -->
+    <header
+        class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-standard-primary">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-10">
+                <a href="index.html" class="flex items-center gap-3 text-standard-primary">
+                    <span class="material-symbols-outlined text-4xl font-bold">radio</span>
+                    <h1 class="text-2xl font-black tracking-tighter italic">ONE TREES RADIO</h1>
+                </a>
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a class="text-sm font-bold hover:text-standard-primary transition-colors"
+                        href="index.html">HOME</a>
+                    <a class="text-sm font-bold hover:text-standard-primary transition-colors"
+                        href="workshops.html">WORKSHOPS</a>
+                    <a class="text-sm font-bold hover:text-standard-primary transition-colors"
+                        href="creators.html">CREATORS</a>
+                    <a class="text-sm font-bold hover:text-standard-primary transition-colors"
+                        href="community.html">COMMUNITY</a>
+                    <a class="text-sm font-bold hover:text-standard-primary transition-colors"
+                        href="partners.html">PARTNERS</a>
+                    <a class="text-sm font-bold hover:text-standard-primary transition-colors"
+                        href="advertise.html">ADVERTISE</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-6">
+                <button
+                    class="bg-standard-primary hover:bg-brand-purple/90 text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide transition-transform active:scale-95">
+                    JOIN THE MOVEMENT
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-[1440px] mx-auto p-4 lg:p-6 space-y-6">
+        <!-- Roster Hero (Fairpress Style Grid) -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-4 h-auto lg:h-[700px]">
+            <!-- Large vertical DJ Video/Image -->
+            <div class="md:col-span-4 relative group overflow-hidden bg-card-dark border border-white/10">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
+                <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    data-alt="Professional DJ performing in a neon lit studio"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIBfEj-D95HB19Pgx98bbG8ORI0dPhJCsLqvglbbWzZSJ8VyuF47xk4qu-8HbRpT7Nvc70cy1plKfOnAjmWvN3iy02Bl8XuKVqeRatjp3ZvxG-xU9GB8i65anXCpiL1HIRmTM0EDVyGbTVVkAkczAR5sb4muFDiqmARl77C3ouhFOVtHpC-zBi6yZbdTKFRLyQ9hOXpanrS9rIzi_P5e_VIrENQxKatEWcxjTlK9r9UEcBI9or6bDwOa49-nCKKOwbigv7qUImf-Kw" />
+                <div class="absolute bottom-6 left-6 z-20">
+                    <span class="bg-primary text-white text-[10px] font-bold px-2 py-1 mb-2 inline-block">LIVE
+                        NOW</span>
+                    <h3 class="text-3xl font-bold leading-none">NEON<br />SESSIONS</h3>
+                </div>
+            </div>
+            <!-- Center Collective Title & Info -->
+            <div class="md:col-span-5 flex flex-col gap-4">
+                <div class="flex-1 bg-primary p-8 flex flex-col justify-end relative overflow-hidden">
+                    <div class="absolute top-4 right-4 opacity-20">
+                        <span class="material-symbols-outlined text-[120px]">hub</span>
+                    </div>
+                    <h2 class="text-6xl lg:text-8xl font-black leading-none outline-text mb-4">THE<br />COLLECTIVE</h2>
+                    <p class="text-black font-medium max-w-xs text-lg">Curating the sound of the underground since 2018.
+                        Over 45 resident creators and counting.</p>
+                </div>
+                <div class="h-1/3 bg-accent p-6 flex items-center justify-between group cursor-pointer">
+                    <h4 class="text-black text-2xl font-bold uppercase italic">Join the roster</h4>
+                    <span
+                        class="material-symbols-outlined text-black text-4xl group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                </div>
+            </div>
+            <!-- Top Right Presenter -->
+            <div class="md:col-span-3 bg-card-dark relative border border-white/10 overflow-hidden">
+                <img class="w-full h-full object-cover contrast-125 brightness-75"
+                    data-alt="High contrast portrait of a female radio presenter"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDGn9TQlb__AdhKrwuJzKjoZhnit7mdx5wzQ9y4MNt_7OrTUY9hb6-jFrSgV3D5eWukvtFHrZNCyO_F5m2gNI-X7AK9wxpluvP0v6DRyu-qe8Jo1iXx0dvnY0IyAwo2EP_7FPWifCxuVceTNnQMJtcnXFxolIvePzY7q4BBasZJ9_iLGqoB6vxk8PsSWh1mxYIGO6Ozir4qutRbyjjy7J5u3BcQJuIZpKgKDC2rVjmdhU2tnGga5Dmnb6-YUswgDKqYu5AbnRFp0I8" />
+                <div class="absolute inset-0 border-[16px] border-black/20"></div>
+                <div class="absolute top-6 left-6">
+                    <p class="text-[10px] tracking-[0.3em] font-bold text-accent">CREATOR SPOTLIGHT</p>
+                    <h3 class="text-2xl font-bold uppercase mt-1">ELARA VANCE</h3>
+                </div>
+            </div>
+        </section>
+        <!-- Marquee -->
+        <div class="bg-primary py-3 border-y-2 border-black overflow-hidden select-none">
+            <div class="marquee-container flex">
+                <div class="marquee-content flex items-center gap-12 text-black font-black italic text-xl">
+                    <span>CYBER_KID</span><span class="material-symbols-outlined">star</span>
+                    <span>DRUM_GURU</span><span class="material-symbols-outlined">star</span>
+                    <span>LO-FI_GIRL</span><span class="material-symbols-outlined">star</span>
+                    <span>BASS_LINE_KILLA</span><span class="material-symbols-outlined">star</span>
+                    <span>SYNTH_WAVE_99</span><span class="material-symbols-outlined">star</span>
+                    <span>CYBER_KID</span><span class="material-symbols-outlined">star</span>
+                    <span>DRUM_GURU</span><span class="material-symbols-outlined">star</span>
+                    <span>LO-FI_GIRL</span><span class="material-symbols-outlined">star</span>
+                    <span>BASS_LINE_KILLA</span><span class="material-symbols-outlined">star</span>
+                    <span>SYNTH_WAVE_99</span><span class="material-symbols-outlined">star</span>
+                </div>
+            </div>
+        </div>
+        <!-- Modular Feature Blocks -->
+        <section class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <!-- Box A: Resident DJs -->
+            <div class="lg:col-span-1 bg-card-dark border border-white/5 p-6 flex flex-col">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-xl font-bold uppercase tracking-tighter">Resident DJs</h3>
+                    <div class="size-2 rounded-full bg-accent animate-pulse"></div>
+                </div>
+                <ul class="space-y-4">
+                    <li class="flex items-center justify-between group cursor-pointer border-b border-white/10 pb-2">
+                        <span class="text-sm font-medium text-slate-400 group-hover:text-white transition-colors">01.
+                            MARCO VELO</span>
+                        <span class="material-symbols-outlined text-primary text-sm">graphic_eq</span>
+                    </li>
+                    <li class="flex items-center justify-between group cursor-pointer border-b border-white/10 pb-2">
+                        <span class="text-sm font-medium text-slate-400 group-hover:text-white transition-colors">02.
+                            SARA_MIX</span>
+                        <span
+                            class="material-symbols-outlined text-primary text-sm opacity-0 group-hover:opacity-100">graphic_eq</span>
+                    </li>
+                    <li class="flex items-center justify-between group cursor-pointer border-b border-white/10 pb-2">
+                        <span class="text-sm font-medium text-slate-400 group-hover:text-white transition-colors">03.
+                            THE_FOUNDRY</span>
+                        <span class="material-symbols-outlined text-primary text-sm">graphic_eq</span>
+                    </li>
+                    <li class="flex items-center justify-between group cursor-pointer border-b border-white/10 pb-2">
+                        <span class="text-sm font-medium text-slate-400 group-hover:text-white transition-colors">04.
+                            JUNIPER_B</span>
+                        <span class="material-symbols-outlined text-primary text-sm">graphic_eq</span>
+                    </li>
+                    <li class="flex items-center justify-between group cursor-pointer border-b border-white/10 pb-2">
+                        <span class="text-sm font-medium text-slate-400 group-hover:text-white transition-colors">05.
+                            VOID_WALKER</span>
+                        <span
+                            class="material-symbols-outlined text-primary text-sm opacity-0 group-hover:opacity-100">graphic_eq</span>
+                    </li>
+                </ul>
+                <button
+                    class="mt-auto pt-6 text-xs font-bold text-accent uppercase tracking-widest text-left hover:underline">View
+                    full roster</button>
+            </div>
+            <!-- Box B: Spotlight -->
+            <div class="lg:col-span-2 bg-card-dark border border-white/5 overflow-hidden group">
+                <div class="relative h-64 overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        data-alt="Close up of high end audio mixing board"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnpSvhho15-Q3SlO_9IJJrEXJ_5uVPHVlMFO5vCrbM06OrpBOELZHhWj9u-wFeQv1AUNLr_BVkTZuTbL6HslbbJ_4eYArYbvO8GaSy2u0rXhAifBZdoySlgjayXSBR_XCmgDw0DTyqny2M1PoA-Wm3Vq1mNAGsxozkivUs2Me9CBTW6VoGoUrjX1uT36KDlgkgGXuAqxlrpHfnRvikp9XMnz6vsANb48a9cGOCWkx4EZajCX-RG4spJC1vmgIXlSDxI-Kv-pIDqOR2" />
+                    <div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+                </div>
+                <div class="p-6">
+                    <p class="text-xs font-bold text-primary mb-2 uppercase tracking-widest">Featured Story</p>
+                    <h3 class="text-3xl font-bold mb-4">REDEFINING THE AIRWAVES: THE FOUNDRY'S 5-YEAR JOURNEY</h3>
+                    <div class="flex items-center justify-between">
+                        <p class="text-slate-400 text-sm max-w-sm">From a bedroom setup in East London to international
+                            airwaves.</p>
+                        <button
+                            class="bg-primary text-white text-[10px] font-black px-4 py-2 rounded-sm hover:bg-white hover:text-black transition-all">READ
+                            STORY</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Box D: Creative Pathways -->
+            <div
+                class="lg:col-span-1 bg-primary/10 border border-primary/30 p-6 grainy-bg flex flex-col justify-between">
+                <div>
+                    <h3 class="text-2xl font-black uppercase mb-4 leading-tight italic">Creative<br />Pathways</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        One Trees Radio is more than a station; it's a launchpad. We are looking for innovative sound
+                        designers, vocalists, and curators to join our ever-expanding creator network.
+                    </p>
+                </div>
+                <div class="pt-6 border-t border-primary/20 mt-6">
+                    <p class="text-[10px] font-bold text-primary mb-2 uppercase tracking-widest">REQUIREMENTS</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-black/40 text-[9px] px-2 py-1 rounded-sm">ORIGINALITY</span>
+                        <span class="bg-black/40 text-[9px] px-2 py-1 rounded-sm">COMMUNITY-DRIVEN</span>
+                        <span class="bg-black/40 text-[9px] px-2 py-1 rounded-sm">BOLD SOUND</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Box C: Podcasts Carousel Header -->
+        <section class="space-y-4">
+            <div class="flex items-end justify-between border-b border-white/10 pb-4">
+                <h3 class="text-4xl font-black uppercase tracking-tighter">Latest Podcasts</h3>
+                <div class="flex gap-2">
+                    <button
+                        class="size-10 border border-white/20 flex items-center justify-center hover:bg-primary transition-colors"><span
+                            class="material-symbols-outlined">chevron_left</span></button>
+                    <button
+                        class="size-10 border border-white/20 flex items-center justify-center hover:bg-primary transition-colors"><span
+                            class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 overflow-x-auto pb-4">
+                <!-- Podcast Item -->
+                <div class="flex-shrink-0 group cursor-pointer">
+                    <div class="aspect-square bg-slate-800 mb-3 relative overflow-hidden">
+                        <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                            data-alt="Podcast cover art abstract audio wave"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3JFv5_vQ_5PqFhEKrSmWBeipA5hlJFEG6MdXQqVmqEh4T1d8ILq5RHrKdYWLzEeXfCqVrBSeV949ybJkOr3Imyn_H5Tjn27LwEuqdHPRYnTeWRC7QUG6RiJTR_dWvZLULBrSDvCw5Xj2cq2Pe2irE-dxNi-i5cR1iaLJBenEq_kpXxBxtSaX53q5WSbybk6jpZm0d31nhVHMINWq7OOmJxYOP_vpS-KlEN3h6Hrl2LFXZUvCLY-O-DRGTMp1t71CnrBdlDt50FdMi" />
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+                            <span class="material-symbols-outlined text-4xl">play_circle</span>
+                        </div>
+                    </div>
+                    <p class="text-[10px] text-primary font-bold">TECHNO / 54:02</p>
+                    <h4 class="font-bold text-sm uppercase group-hover:text-primary transition-colors">THE DEEP END #102
+                    </h4>
+                </div>
+                <!-- Add other items here as per original snippet... truncated for brevity in write_to_file call but must include full content requested -->
+                <div class="flex-shrink-0 group cursor-pointer">
+                    <div class="aspect-square bg-slate-800 mb-3 relative overflow-hidden">
+                        <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                            data-alt="Microphone in studio setting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKmqE2n4TY2Qrjyr2Ba-hw4_KOPY7Hpszlw-IQi75oeaXMs2S4Z9EvuxUDKaNBC1f0biEcmsDltksI9QmTIGAYAdFcc6pTqWL_HWKyuI_cnWt3QlUZ7AU7SeE36g04xRTYRR760ksJZ-hrOw3S4YNw4je4AqO-M2q09N_vlhqTV3LlOSpA4EfnpTfhodN6_ohevkfEAgyd_AZrSPIxp9dFKrZypgK9GGC1iHbSP_NoQ69wL-MdHnI4xbuDM8HbuBjInQMAaFTmAaGk" />
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+                            <span class="material-symbols-outlined text-4xl">play_circle</span>
+                        </div>
+                    </div>
+                    <p class="text-[10px] text-primary font-bold">TALK / 42:15</p>
+                    <h4 class="font-bold text-sm uppercase group-hover:text-primary transition-colors">CREATOR TALKS
+                        VOL.4</h4>
+                </div>
+                <div class="flex-shrink-0 group cursor-pointer">
+                    <div class="aspect-square bg-slate-800 mb-3 relative overflow-hidden">
+                        <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                            data-alt="Vinyl record spinning"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZHUTJbR2EsLSV6ngT22WG678eqgCPavpG5nzT2k7RnSwBeItWRpmnhIVie-dt0rBQdsayrOclfU9_9ax_SwptK3lLH9pYEITXYjL_loKJGDU8Uh19cuH35qNT0kgX5c1hAEYSwDqRzYJjAcY2NvNB5l8OdFA0OM1DuSh5iwa_HvqUUb9I8rbPpHevSYxxnfhdDPv3bezgU5bpAsDIRDeEeDXKkE8vxSJ-Y0mkmdjhuBS_WvsN-I4F_3Iu2gy3AzpfU6qGtYI9K3aG" />
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+                            <span class="material-symbols-outlined text-4xl">play_circle</span>
+                        </div>
+                    </div>
+                    <p class="text-[10px] text-primary font-bold">HOUSE / 60:00</p>
+                    <h4 class="font-bold text-sm uppercase group-hover:text-primary transition-colors">VINTAGE VIBES
+                        EXP.</h4>
+                </div>
+                <div class="flex-shrink-0 group cursor-pointer">
+                    <div class="aspect-square bg-slate-800 mb-3 relative overflow-hidden">
+                        <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                            data-alt="Abstract colorful neon tubes"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhrB-QFSdZn8GKVpudey0K2q1tD3tQB5xuM2EO8C9dn9CBpxJL41iwQzNgTZVJWer1gnOOaWuZXbv5coHLQdFXZLygrj3d2rbZwuVnogTCLuUUIV5t2c92L_0Ns8Yr_bJKAffBp9cr8nYmkRkOFbec06s7dwJ1YzYYYb4MmJ7X1ZZ8aHOCSt9qIRw8_EefWKDB0ODGkSJi5Ko-BDsJLbTaJczoZkclUCV0bFB8V-BdVxB15S8gUttEWrmjvaeC3Kvb_jfZhVuwdbft" />
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+                            <span class="material-symbols-outlined text-4xl">play_circle</span>
+                        </div>
+                    </div>
+                    <p class="text-[10px] text-primary font-bold">AMBIENT / 88:20</p>
+                    <h4 class="font-bold text-sm uppercase group-hover:text-primary transition-colors">NIGHT DRIFTING
+                    </h4>
+                </div>
+                <div class="flex-shrink-0 group cursor-pointer">
+                    <div class="aspect-square bg-slate-800 mb-3 relative overflow-hidden">
+                        <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                            data-alt="Close up of dj equipment knobs"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuApV10n8B1djCeUTRn3Shs5f5iRMyK6rUyjwl9tYmd7Si_3ww0smeQD7k2kz67wmUzqyjIGMV8ZUpnXkOOId_0AyZmq-Z_nhMW-xgV6ieNW0pR69xTFpaWQJIrR4l_rsYl60jz0m1QB_F2kwd1PpiQRxRXM-PT7lJ2KbbFkn-8VD_wQ9UE18plIJ5RY0dGG0v9RxaGZYYyx_foyteUyotcdjI6pGFoULJBQl10DzPFztRJUABIxLdBqZEk5hMffKTUoIkioHMzYld54" />
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+                            <span class="material-symbols-outlined text-4xl">play_circle</span>
+                        </div>
+                    </div>
+                    <p class="text-[10px] text-primary font-bold">EXPERIMENTAL / 45:00</p>
+                    <h4 class="font-bold text-sm uppercase group-hover:text-primary transition-colors">BEYOND FREQUENCY
+                    </h4>
+                </div>
+            </div>
+        </section>
+        <!-- Content Gallery: Behind the Scenes -->
+        <section class="space-y-6">
+            <h3 class="text-xl font-bold uppercase border-l-4 border-accent pl-4">Behind the Scenes</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 auto-rows-[200px]">
+                <div class="md:row-span-2 overflow-hidden bg-card-dark group">
+                    <img class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
+                        data-alt="People collaborating in a music studio"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsTQxJhJjvPPhpPQ-W9j2oX_QDcz4W4GYiSWzkNyZPP1gQwYN3BX1Os5dPApiNK8334SARXp8wXecVQAdtykPwFehfbL7Jj2dKe4Gt8DYe0HKN0CBS9yUO7Dg876S6tT0KBvuswXv1hsC5RCRE5MwD9VOqgeBwAdd4ZLF4_ahrnP9DcU7GwXvpTdPurb3OK9TgSK1z-rNsdaqTrrOatEtWuDEZ__7N3SetvLKglxBkDe4Qkja-9u4tMDcu6rfFJO4hUmbvPGgu5eiF" />
+                </div>
+                <div class="overflow-hidden bg-card-dark group">
+                    <img class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
+                        data-alt="Radio station mixing desk with many buttons"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvl3ryqR1yldD9uyaVLG6-getkHbz0-rv5imvzBjTNvunsz3siAScmE96hbKJKW577011v7KwLkfCei9ooYqbvAyjPkn-jqjNFovqGNytXBxFMNF_YsjLpAaS-21WtSDlj6thMIRRhnApAZHmkNzojH8napqJswxxSR8smb79F5Ozyb8v6BwdfwWYMmRMBnrRiUOOnHy123pbfjmNaq3c3JQy9KCKq869SRLfc6QT2lMmhWWaC2mUwuosdz5_lB0oO-cfH-Mx9LBYK" />
+                </div>
+                <div class="md:col-span-2 overflow-hidden bg-card-dark group">
+                    <img class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
+                        data-alt="A crowd of people at a community workshop"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvq2YeOm7OjIAQZszkDgiwWsbUHW4yYgrsKB1X4_FANJi6kHVqMtHhJaTkVZ_ltmo5_Em_eV9GtD91SJfMVCL4CO9nDORhPmtllhI1-JfHhGS0ySYgrR6WJPIj7_qFKu2gYzuDV0XmoNnMpR-xcNlUk7VnvXXpPW4RlOCeXqG8rc3-OMKjQ-bPqfgaTLwvenFEjO9V97vxYR944YfkNWAIUW2Bc3t7nUusB_I9ohOTPRY4fZr3IIRY6p1iksjUU_rNdcslYRqdh4Nf" />
+                </div>
+                <div class="overflow-hidden bg-card-dark group">
+                    <img class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
+                        data-alt="Microphone in a dark broadcasting booth"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU-8_JDMXdC-LkiOY472-bfDMzxOGWqCvKRitGQbEAEydgBn1P7amioN8e1JaRKTyadmg7K0SW58A5jQ5849Ze62EJIWnZWnGtbqAXMkzjVt1lDM3BWCd-XLdbU0MQ8643Pa0LJF4nigtcrBmY0uWNfc6uunfcdC_2KDic0Ut3fMe6lJ-3McwM4-6qLhmEP_Db7RVKicQ6RAnMwsTiZ6DklqfB1DrtYQwYNvlC-F_ns3uBScW3llcEvM93wabao8guJeWpxUDUihey" />
+                </div>
+                <div class="md:row-span-2 overflow-hidden bg-card-dark group">
+                    <img class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
+                        data-alt="Energetic concert stage lights"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2WsrRxfrx_RMN_48HoTjt4H48OSIM6pvlDHW71OrEGwevy1rSbWypmLYbf0Jf4AgqyXfvpjTozXexxLAKkNVQ7u6XHbWbN7KYNtpSxmllaDdmEDHIWyrzZrySup9ahWedRY8beeG_TdEBQFPJb7c7KK9apT0_rxzo53xK2mvO5fwLJYiEZLwPIFfGwpTu5yN9AeGnr8YACC7srdtVqoPcHTqOkzqJEWHazK8za9kyn_lhhSMfaADKsKvaWA5VssgP1KHd1a6VkrLB" />
+                </div>
+                <div class="overflow-hidden bg-card-dark group">
+                    <img class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
+                        data-alt="Group of people talking in an office"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP11Vcj6Wav1JKOrIpgbF08-ji9J8u4aYMhnPLe0MYSlcrdWhuvjF-4P6T-ITOeLVtBANt5TxfeBVV88Bail9Q1cyLtE_NOx-u3VSr7CJBdcKgt98MR8yS1Al7_kSkE_q-O6_i39zLINv0ByJqD0_ToY4uuD95WC2mdgX1sY3wgwihlxHcrbckFWsBRm3Evwbsjebx6Vq8VNUTVVp1bHdTxZq2L_k4-wuNyyqs-veQo3XfFK0dgAXC1WFXEYkOEWKv-pLqOf4L5p9h" />
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="relative h-[400px] flex items-center justify-center text-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover contrast-150 brightness-50"
+                    data-alt="High contrast black and white photo of a massive festival crowd"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZr5UbfDsJxL91PI6AJjlzCDznGxfl1UkgFPmP7F_rqQ-6OSHnnrwMFflSqPDKNy6nWsa5ckdG6cXmpfbcKR2woR8zpmN7w_axMxbAyiNhmiUc0QcuBraH7A-tai5ugkM5pH5SgsodLvZMW4gUymF9XqBm--h9RBHt5HXhZLy5OpqEaAs5zdNMKwOxKVmUkIVLAECbPO-giY11S6HD-XpeN3ZDmD-ua822mMyoqs7M10xNiWxMceNHHsb8o4oFM0iPvtrD2lSAXGQM" />
+                <div class="absolute inset-0 bg-background-dark/60"></div>
+                <div class="absolute inset-0 bg-primary/20 mix-blend-color"></div>
+            </div>
+            <div class="relative z-10 p-6">
+                <h2 class="text-4xl lg:text-7xl font-black uppercase mb-8 italic leading-none">Ready to shape<br />the
+                    future?</h2>
+                <button
+                    class="bg-primary text-white font-black px-12 py-5 text-xl tracking-tighter hover:bg-accent hover:text-black transition-all border-b-4 border-white/20 active:translate-y-1">
+                    APPLY TO JOIN THE CREATOR NETWORK
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Standardized) -->
+    <footer class="bg-standard-primary-low border-t border-standard-primary pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 text-standard-primary mb-8">
+                        <span class="material-symbols-outlined text-4xl font-bold">radio</span>
+                        <h2 class="text-3xl font-black italic tracking-tighter">ONE TREES RADIO</h2>
+                    </div>
+                    <p class="text-slate-400 max-w-sm mb-8 font-medium">The digital pulse of the city. We are more than
+                        a radio station; we are a community hub for the next generation of creative pioneers.</p>
+                    <div class="flex gap-4">
+                        <a class="size-10 rounded-full bg-brand-purple/20 flex items-center justify-center hover:bg-standard-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-white">share</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-brand-purple/20 flex items-center justify-center hover:bg-standard-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-white">public</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-brand-purple/20 flex items-center justify-center hover:bg-standard-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-white">mail</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-black uppercase tracking-widest mb-6">EXPLORE</h4>
+                    <ul class="space-y-4 font-bold text-sm text-slate-400">
+                        <li><a class="hover:text-standard-primary transition-colors" href="index.html">LIVE STREAM</a>
+                        </li>
+                        <li><a class="hover:text-standard-primary transition-colors" href="#">SCHEDULE</a></li>
+                        <li><a class="hover:text-standard-primary transition-colors" href="#">ARCHIVES</a></li>
+                        <li><a class="hover:text-standard-primary transition-colors" href="#">NEWS</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black uppercase tracking-widest mb-6">COMMUNITY</h4>
+                    <ul class="space-y-4 font-bold text-sm text-slate-400">
+                        <li><a class="hover:text-standard-primary transition-colors" href="community.html">JOIN US</a>
+                        </li>
+                        <li><a class="hover:text-standard-primary transition-colors" href="workshops.html">WORKSHOPS</a>
+                        </li>
+                        <li><a class="hover:text-standard-primary transition-colors" href="creators.html">CREATORS</a>
+                        </li>
+                        <li><a class="hover:text-standard-primary transition-colors" href="#">DONATE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-brand-purple/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <p class="text-xs font-bold text-slate-500">© 2024 ONE TREES RADIO. POWERED BY THE YOUTH.</p>
+                <div class="flex gap-8 text-xs font-bold text-slate-500">
+                    <a class="hover:text-white" href="#">PRIVACY POLICY</a>
+                    <a class="hover:text-white" href="#">TERMS OF SERVICE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/layout.js"></script>
+</body>
+
+</html>

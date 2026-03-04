@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>One Trees Radio: Community Hub</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8c2bee", // site-wide primary from index.html
+                        "community-primary": "#33f20d",
+                        "accent": "#bc13fe",
+                        "background-light": "#f6f8f5",
+                        "background-dark": "#191022", // site-wide background from index.html
+                        "neutral-dark": "#1a2418",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .text-outline {
+            -webkit-text-stroke: 2px white;
+            color: transparent
+        }
+
+        .grainy-overlay {
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDJ6ORzL1sM7EfV6XrsYz5QdnPoSNbjDwnnrKm-V1S9-2GXV8EPgNk4md60p7_Ipb5UwVvxlQy6McCK-7kzhrJ4s_7zJTBI-038mmQfnEP5J874wTl93aOvXSgAKUodeGDMaYe8EvERLkj0yIAMVViAfr-390FFMswJsrcENpIytTJjW3o7rU1FrHmOTYyYj_pdeJ3SdsCzw9JiHfKZOd0L-3Y6jpBM2_g0aWwPI7XEuT4HDn_ErSMP7iHSIheHcaQnmpkdzYe0Xuxm);
+            opacity: 0.05
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 24s linear infinite
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 overflow-x-hidden selection:bg-primary selection:text-white">
+    <!-- Top Navigation (Matched with Index.html) -->
+    <header
+        class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/20">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-10">
+                <a href="index.html" class="flex items-center gap-3 text-primary">
+                    <span class="material-symbols-outlined text-4xl font-bold">radio</span>
+                    <h1 class="text-2xl font-black tracking-tighter italic">ONE TREES RADIO</h1>
+                </a>
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="index.html">HOME</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors"
+                        href="workshops.html">WORKSHOPS</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="creators.html">CREATORS</a>
+                    <a class="text-sm font-bold text-primary underline decoration-2 underline-offset-4"
+                        href="community.html">COMMUNITY</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="partners.html">PARTNERS</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors"
+                        href="advertise.html">ADVERTISE</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-6">
+                <button
+                    class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide transition-transform active:scale-95">
+                    JOIN THE MOVEMENT
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[85vh] w-full flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent z-10">
+                </div>
+                <img class="w-full h-full object-cover" data-alt="Vibrant youth street festival with crowds dancing"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKqST3NiQZsgPy--WMdsRWC86MYfrNkKPKbDhFvfL9ON7bJTE0D-4_sgUPjlqeT4JEfF9tucR5K5zeit7RpBYAd0BDaKAkMQps9EbeSPyvClMoXuyXDGjYo5tJv7FiSkueLwdfSu2MsqnuYfr4FCO50j4exRix1HmSwGykve5se4TL0X5oZ4ncaDhrYGkze6yFu44fWoGaQ8oUWszbps9H0oLlNMbMsX9j46VQv8RdIxVrF8PvV7QKeTcx0DyEPno7ytCnEPrgtwNQ" />
+            </div>
+            <div class="relative z-20 text-center px-4">
+                <h1 class="text-7xl md:text-[12rem] font-black uppercase tracking-tighter text-outline leading-none">
+                    THE MOVEMENT
+                </h1>
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:translate-x-40 md:-translate-y-40">
+                    <div
+                        class="size-32 md:size-40 rounded-full bg-community-primary flex items-center justify-center text-center p-4 animate-pulse rotate-12 shadow-[0_0_50px_rgba(51,242,13,0.4)]">
+                        <p class="text-background-dark font-black text-sm md:text-base leading-tight uppercase">JOIN
+                            THE<br />HUB NOW</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Talk Marquee -->
+        <div class="bg-accent py-4 marquee-container border-y-2 border-background-dark">
+            <div class="marquee-content flex gap-8">
+                <span class="text-background-dark text-2xl font-black uppercase italic shrink-0">YOUTH-LED CONVERSATIONS
+                    •
+                    LIVE MOMENTS • COMMUNITY VOICES • THE FUTURE IS NOW • RADICAL CHANGE • YOUTH-LED CONVERSATIONS •
+                    LIVE MOMENTS • COMMUNITY VOICES • THE FUTURE IS NOW • RADICAL CHANGE •</span>
+                <span class="text-background-dark text-2xl font-black uppercase italic shrink-0">YOUTH-LED CONVERSATIONS
+                    •
+                    LIVE MOMENTS • COMMUNITY VOICES • THE FUTURE IS NOW • RADICAL CHANGE • YOUTH-LED CONVERSATIONS •
+                    LIVE MOMENTS • COMMUNITY VOICES • THE FUTURE IS NOW • RADICAL CHANGE •</span>
+            </div>
+        </div>
+
+        <!-- Impact Stats -->
+        <section class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+                class="bg-community-primary p-8 rounded-xl border-4 border-background-dark shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden group">
+                <div class="grainy-overlay absolute inset-0"></div>
+                <h3 class="text-6xl font-black text-background-dark leading-none">10K+</h3>
+                <p class="text-background-dark/80 font-bold uppercase tracking-wider mt-2">VOICES HEARD</p>
+                <span
+                    class="material-symbols-outlined absolute -bottom-4 -right-4 text-8xl opacity-10 text-background-dark">groups</span>
+            </div>
+            <div
+                class="bg-accent p-8 rounded-xl border-4 border-background-dark shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden">
+                <div class="grainy-overlay absolute inset-0"></div>
+                <h3 class="text-6xl font-black text-slate-100 leading-none">500+</h3>
+                <p class="text-slate-100/80 font-bold uppercase tracking-wider mt-2">HOURS LIVE</p>
+                <span
+                    class="material-symbols-outlined absolute -bottom-4 -right-4 text-8xl opacity-10 text-white">podcasts</span>
+            </div>
+            <div
+                class="bg-slate-100 p-8 rounded-xl border-4 border-background-dark shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden">
+                <div class="grainy-overlay absolute inset-0"></div>
+                <h3 class="text-6xl font-black text-background-dark leading-none">12</h3>
+                <p class="text-background-dark/80 font-bold uppercase tracking-wider mt-2">GLOBAL CITIES</p>
+                <span
+                    class="material-symbols-outlined absolute -bottom-4 -right-4 text-8xl opacity-10 text-background-dark">public</span>
+            </div>
+        </section>
+
+        <!-- Community Feed Grid -->
+        <section class="max-w-7xl mx-auto px-6 py-10">
+            <div class="flex items-end justify-between mb-8 border-b-2 border-white/10 pb-4">
+                <h2 class="text-4xl font-black uppercase tracking-tighter">Community <span
+                        class="text-accent">Feed</span></h2>
+                <div class="flex gap-4 uppercase text-xs font-black">
+                    <button class="text-community-primary underline">LATEST</button>
+                    <button class="opacity-50 hover:opacity-100 transition-opacity">TRENDING</button>
+                </div>
+            </div>
+            <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+                <!-- Video Card -->
+                <div class="break-inside-avoid relative group rounded-xl overflow-hidden border border-white/5">
+                    <img class="w-full" data-alt="Young people laughing in a creative studio"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHVBlbhizZcaM24NLbJh_kMWWwPypuIzGZ8X-kIMPNCUN6kwa1QDoExTIomjbfadF0WhTslq6zHS3Jrnfuhimpnysx1JV4WgZEKHrC7-kDXb4CWIBTw_nkWUKQi4YFPgid4UufmxsBqO3tVT2GA1abQ9eg-XSdDAtOm99I7pF_H-rKF6Xdbq6OnSylFR_Im8BFHBkqwajwfWQms42v_UfyNqXgiFT91eqS8dmGrRHNuo3O1slRPfVabD232FzX10vmQpHe98iSfn0x" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span
+                                class="bg-community-primary text-background-dark text-[10px] font-black px-2 py-0.5 rounded uppercase">Live
+                                Session</span>
+                        </div>
+                        <p class="text-sm font-bold leading-snug">Street Talk: The Identity Crisis of Gen Z</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="flex -space-x-2">
+                                <div class="size-6 rounded-full border border-black bg-slate-500"></div>
+                                <div class="size-6 rounded-full border border-black bg-slate-400"></div>
+                            </div>
+                            <span class="material-symbols-outlined text-community-primary">play_circle</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Voice Note Card -->
+                <div class="break-inside-avoid bg-neutral-dark p-6 rounded-xl border border-white/10 relative">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="bg-community-primary/20 p-2 rounded-lg">
+                            <span class="material-symbols-outlined text-community-primary">mic</span>
+                        </div>
+                        <span class="text-[10px] font-black opacity-40 uppercase tracking-widest">Voice Note #402</span>
+                    </div>
+                    <div class="flex items-center gap-1 h-12 mb-4">
+                        <div class="w-1 h-4 bg-accent rounded-full animate-pulse"></div>
+                        <div class="w-1 h-8 bg-accent rounded-full"></div>
+                        <div class="w-1 h-6 bg-accent rounded-full animate-bounce"></div>
+                        <div class="w-1 h-12 bg-community-primary rounded-full"></div>
+                        <div class="w-1 h-8 bg-community-primary rounded-full animate-pulse"></div>
+                        <div class="w-1 h-10 bg-accent rounded-full"></div>
+                        <div class="w-1 h-4 bg-accent rounded-full"></div>
+                        <div class="w-1 h-12 bg-accent rounded-full"></div>
+                        <div class="w-1 h-6 bg-community-primary rounded-full animate-bounce"></div>
+                    </div>
+                    <p class="text-lg font-medium italic">"London's streets aren't just concrete, they're canvas..."</p>
+                    <p class="text-xs font-bold text-community-primary mt-4 uppercase">@mali_visions</p>
+                </div>
+                <!-- High Contrast Photo -->
+                <div class="break-inside-avoid relative rounded-xl overflow-hidden group">
+                    <img class="w-full grayscale hover:grayscale-0 transition-all duration-500"
+                        data-alt="Creative collaborative workspace with neon lighting"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTpn9ZpViOKoA5SbBg398RnLCLRz0tZwS9yO2IE1ToKVPHNfHDynjbG9MWf-B8WMd4_pL-8WddnpTJH068il062xUy72lxClFfU0yIArahNof4qudAGkqKhrqEAx7PLmm0CQT3Mlu-Q-0VEhwI_OODvOre7_rvQBZLRXMAvDvK2LhHKHmcNPRvrJVpebvSkoOYpWgQpuSFSGKGVDaduKmhzkFutxgKUfIlGWotxepWoo1pr8bvumLFOJ-fVVET5ERqOpjB482XmVxU" />
+                    <div
+                        class="absolute top-4 right-4 bg-white text-background-dark p-2 rounded-full size-10 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-sm">open_in_new</span>
+                    </div>
+                </div>
+
+                <!-- More cards... -->
+                <div class="break-inside-avoid relative group rounded-xl overflow-hidden border border-white/5">
+                    <img class="w-full" data-alt="Dancers in silhouette under neon light"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0mymCTLFRvdtW-StQdbcFPTbtTLb_pwrmcIbxI9ZWNfl7Dz68UdO3BaShDt07Fv0iW62nKyaLErhC07zThDUQPCB8USZQbg3NO8PY6NYORUmN_JyKZSVIKS8XARaL_G29DDBLXzBsTd9Bfht7MiAnspC5Hq4KXgGNRofeBm5euxBhB3vOGAuMUNk34W5kwb4tZC_0MRRsEICHZ2dZ-f8W4wYUGbTWIDPiLGGi1WVIUgzyvniRIYNt8gFdE6SZX6cVpk6qLI96Zs6g" />
+                    <div class="absolute inset-0 bg-black/40 p-4">
+                        <span class="material-symbols-outlined text-white text-4xl">play_arrow</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Community Moments (Horizontal Scroll) -->
+        <section class="bg-neutral-dark/30 py-20 px-6 lg:px-20 border-y border-white/5">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex items-center justify-between mb-10">
+                    <h2 class="text-4xl font-black uppercase tracking-tighter">Upcoming <span
+                            class="text-community-primary italic">Moments</span></h2>
+                    <div class="flex gap-2">
+                        <button
+                            class="size-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-background-dark transition-all">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button
+                            class="size-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-background-dark transition-all">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex gap-6 overflow-x-auto pb-6 no-scrollbar">
+                    <!-- Event Card 1 -->
+                    <div
+                        class="min-w-[350px] group relative rounded-xl overflow-hidden border-2 border-transparent hover:border-community-primary transition-all">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                data-alt="Afrobeats block party at night"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUYhUFXWMOQjXVr-aTN6vdsov95q1q2FpgN8DuDahsAKLiiGZ3ctqHRV0kzgi8NwzjjhDAtji7gKfIYX00E_nxnJcfs8n0i0tDT9uo0flkJuSD9M1rFDC4IFS9M3Az8YBuD_SIOeMH_C3Z-vnaHRe-Go_delEeuoTNOcwzERt5G_0msLPVYPR-RgNKKmQkaL8k5cIh7XwvmgxH-Dyygn8K0Mi8nTxb6DTYlnYcVPLgI11VLvyhiGMsyGUNcpOlHdACDl115jcP2C9f" />
+                        </div>
+                        <div class="p-6 bg-neutral-dark">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h4 class="text-xl font-black uppercase leading-tight">Afrobeats Block Party</h4>
+                                    <p class="text-xs font-bold text-slate-400 mt-1 uppercase tracking-widest">London,
+                                        UK •
+                                        June 12</p>
+                                </div>
+                                <span
+                                    class="bg-community-primary text-background-dark font-black px-2 py-1 text-[10px] rounded uppercase">Free</span>
+                            </div>
+                            <button
+                                class="w-full border border-white/20 py-3 rounded-lg text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-background-dark transition-colors">Register
+                                Interest</button>
+                        </div>
+                    </div>
+                    <!-- Event Card 2 -->
+                    <div
+                        class="min-w-[350px] group relative rounded-xl overflow-hidden border-2 border-transparent hover:border-accent transition-all">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                data-alt="Workshop session with post-it notes"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7JEbGkeGB98LIaNDKjIEs1LyGwWsqZY30rufJmRX2FWDRgfBI5oiBAB-dsutzpFmCVK6A7A7tWyCwe2cbWusmS1g4iB1MGzb3T-7U-OwCON2nsUaO7-kkJL9AvipFx1YrYQiSNzdnxLBkyaUrVigGuXTsisG1erW6NYDsADPN6rTF797J7OOs3uHbwDD9ZqHsaRH_hEUNBTC5fJjf3vyODvGTFZMWculGwRqSSf1NcfV0tya1YbP4tUqRJpqZnjbJ4-PFhyHUqkY0" />
+                        </div>
+                        <div class="p-6 bg-neutral-dark">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h4 class="text-xl font-black uppercase leading-tight">Street Politics Workshop</h4>
+                                    <p class="text-xs font-bold text-slate-400 mt-1 uppercase tracking-widest">Berlin,
+                                        DE •
+                                        June 18</p>
+                                </div>
+                                <span
+                                    class="bg-accent text-white font-black px-2 py-1 text-[10px] rounded uppercase">Workshop</span>
+                            </div>
+                            <button
+                                class="w-full border border-white/20 py-3 rounded-lg text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-background-dark transition-colors">Register
+                                Interest</button>
+                        </div>
+                    </div>
+                    <!-- Event Card 3 -->
+                    <div
+                        class="min-w-[350px] group relative rounded-xl overflow-hidden border-2 border-transparent hover:border-community-primary transition-all">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                data-alt="Open mic night with singer"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8oI1ULQ2boiRtn_XQRuDgGXI4gK15ImkiZjVUl5AQYai8RdL_0J3dBJDddCsfY0KBYVYNKl9oa0NirooJxvzE16KaTNY33qJM3zr6gsFKIBlt-YEmpckiDVdwlu5_47CCV1EH1wTDRMsMmd84aTixFaohVwjdmcKuRR6GO-nFD8JbkWr8fKbOwnLa2J45OVpkI0jvgEmmdYivWBK6NZdsx40w5BuZTA58aonsbWL019RVAeRHklgP1Nim2TvhJlHFRnANN5yLa4gj" />
+                        </div>
+                        <div class="p-6 bg-neutral-dark">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h4 class="text-xl font-black uppercase leading-tight">Midnight Mic Session</h4>
+                                    <p class="text-xs font-bold text-slate-400 mt-1 uppercase tracking-widest">Online •
+                                        June
+                                        21</p>
+                                </div>
+                                <span
+                                    class="bg-community-primary text-background-dark font-black px-2 py-1 text-[10px] rounded uppercase">Digital</span>
+                            </div>
+                            <button
+                                class="w-full border border-white/20 py-3 rounded-lg text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-background-dark transition-colors">Register
+                                Interest</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join the Conversation CTA -->
+        <section class="relative min-h-[500px] flex items-center justify-center py-20 px-6 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover brightness-50 contrast-125 grayscale"
+                    data-alt="Diverse crowd of young people cheering"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdH6XgGYMXSHWFBNnz3kNngfy-T33vQV0670_7H4nYyZRkqV1OYZ4gUH0pIMn1syEyyRZq1vD-qgYcRxfn36GGxPJNcN2D6Xfqj0ZPYuxPeZ8DWbfrPyws1XIxmubibXKJRdMTDT0lXjmYXq7aqKCUYF0hJ7QIH5usIwtkOJWYqC5uAhHmlG83BfKoohahfB6By-2Irr8krG6shb4PfqqaAPWKyQY6w6iZStsI8ifBRcRM0mfVGWPs9EdMAfHt3uHtqi2h3f7Zjg3d" />
+                <div class="absolute inset-0 bg-background-dark/60"></div>
+                <div class="grainy-overlay absolute inset-0"></div>
+            </div>
+            <div class="relative z-10 max-w-4xl text-center">
+                <h2 class="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-8 leading-none">Your Voice,
+                    <br /><span class="text-community-primary italic">Our Future</span>
+                </h2>
+                <div class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+                    <input
+                        class="flex-1 bg-background-dark/80 border-2 border-community-primary rounded-xl px-6 py-4 text-community-primary font-black placeholder:text-community-primary/50 focus:ring-0 focus:border-community-primary shadow-[0_0_20px_rgba(51,242,13,0.3)]"
+                        placeholder="ENTER YOUR EMAIL" type="email" />
+                    <button
+                        class="bg-community-primary text-background-dark px-10 py-4 rounded-xl font-black uppercase tracking-widest hover:scale-105 transition-transform">
+                        Join Hub
+                    </button>
+                </div>
+                <p class="text-xs font-bold uppercase tracking-widest mt-6 opacity-60 italic">Privacy is key. We only
+                    send
+                    the good stuff.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Matched with Index.html) -->
+    <footer class="bg-primary/10 border-t border-primary/20 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 text-primary mb-8">
+                        <span class="material-symbols-outlined text-4xl font-bold">radio</span>
+                        <h2 class="text-3xl font-black italic tracking-tighter">ONE TREES RADIO</h2>
+                    </div>
+                    <p class="text-slate-400 max-w-sm mb-8 font-medium">The digital pulse of the city. We are more than
+                        a radio station; we are a community hub for the next generation of creative pioneers.</p>
+                    <div class="flex gap-4">
+                        <a class="size-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-white">share</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-white">public</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-white">mail</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-black uppercase tracking-widest mb-6">EXPLORE</h4>
+                    <ul class="space-y-4 font-bold text-sm text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="index.html">LIVE STREAM</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">SCHEDULE</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">ARCHIVES</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">NEWS</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black uppercase tracking-widest mb-6">COMMUNITY</h4>
+                    <ul class="space-y-4 font-bold text-sm text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="community.html">JOIN US</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="workshops.html">WORKSHOPS</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="creators.html">CREATORS</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">DONATE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-primary/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <p class="text-xs font-bold text-slate-500">© 2024 ONE TREES RADIO. POWERED BY THE YOUTH.</p>
+                <div class="flex gap-8 text-xs font-bold text-slate-500">
+                    <a class="hover:text-white" href="#">PRIVACY POLICY</a>
+                    <a class="hover:text-white" href="#">TERMS OF SERVICE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

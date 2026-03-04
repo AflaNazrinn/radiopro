@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>One Trees Radio | Ultra-Vibrant Partner Hub</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f0df2",
+                        "accent-blue": "#00d4ff",
+                        "accent-magenta": "#ff00ff",
+                        "background-dark": "#0a0414",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .grainy-overlay {
+            position: relative;
+        }
+        .grainy-overlay::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAPeaedjKlOjJP77Jcj3kCIwVfGKrUgE4XC_len8A5X0FdH3L34TCVDQOu6ydgCPRvektSj1wS0SI5F8kAPMbfOqHrNiiiVq9Zm0vbCfS_Xsw-4VW7YeP9TmFP6Qk2qmgm_qgXnt_7rrYi6vR9_PtNoDQ3NcBy3i-ebQH_cV14BPWw8tbYaRymHwvW6RGhs3eJxk0JKCgnakECN1G1VU32hEagt5g-JaszrLg0wbtHJbuXsl9DvjwKSraKdTemMdIyV5C4pXCAyN2KQ);
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .marquee {
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            gap: 4rem;
+        }
+        .marquee-content {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: space-around;
+            min-width: 100%;
+            gap: 4rem;
+        }
+        .vibe-glow-blue {
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+            border: 1px solid rgba(0, 212, 255, 0.5);
+        }
+        .vibe-glow-violet {
+            box-shadow: 0 0 15px rgba(127, 13, 242, 0.4);
+            border: 1px solid rgba(127, 13, 242, 0.5);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .floating-element {
+            pointer-events: none;
+            position: absolute;
+            opacity: 0.6;
+        }
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+        .animate-scroll {
+            animation: scroll 40s linear infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark font-display text-slate-100 overflow-x-hidden">
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="floating-element top-[10%] left-[5%] w-32 h-32 rounded-full border-2 border-accent-blue/20 blur-sm">
+        </div>
+        <div class="floating-element top-[40%] right-[10%] w-64 h-64 rounded-full border-2 border-primary/20 blur-md">
+        </div>
+        <div
+            class="floating-element bottom-[20%] left-[15%] w-48 h-48 rounded-full border-2 border-accent-magenta/20 blur-lg">
+        </div>
+        <div
+            class="floating-element top-[60%] left-[50%] w-[1px] h-96 bg-gradient-to-b from-transparent via-accent-blue/30 to-transparent rotate-45">
+        </div>
+        <div
+            class="floating-element top-[20%] right-[30%] w-[1px] h-[500px] bg-gradient-to-b from-transparent via-accent-magenta/30 to-transparent -rotate-12">
+        </div>
+    </div>
+
+    <!-- Top Navigation (Standardized with Index.html) -->
+    <header
+        class="fixed top-0 z-50 w-full bg-background-dark/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-white/10 px-6 lg:px-20 py-4">
+        <div class="mx-auto flex max-w-7xl items-center justify-between">
+            <div class="flex items-center gap-10">
+                <a href="index.html" class="flex items-center gap-3 text-primary">
+                    <span class="material-symbols-outlined text-4xl font-bold">radio</span>
+                    <h1 class="text-2xl font-black tracking-tighter italic">ONE TREES RADIO</h1>
+                </a>
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="index.html">HOME</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors"
+                        href="workshops.html">WORKSHOPS</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="creators.html">CREATORS</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors"
+                        href="community.html">COMMUNITY</a>
+                    <a class="text-sm font-bold text-primary underline decoration-2 underline-offset-4"
+                        href="partners.html">PARTNERS</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors"
+                        href="advertise.html">ADVERTISE</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-6">
+                <button
+                    class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide transition-transform active:scale-95">
+                    JOIN THE MOVEMENT
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative h-screen w-full flex items-center justify-center overflow-hidden grainy-overlay">
+            <div
+                class="absolute inset-0 z-10 bg-gradient-to-br from-primary/20 via-transparent to-accent-blue/20 pointer-events-none">
+            </div>
+            <div class="absolute inset-0 bg-background-dark/30 z-10"></div>
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full bg-cover bg-center"
+                    style="background-image: linear-gradient(to bottom, rgba(10,4,20,0.1), rgba(10,4,20,1)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDnR8eyur7SdXe1EA2ADHwp6e1JKBR619GOkTFI9wao-oAw9ZuHjxY59Al7vWkIWG0hw5GmfZn7lkyi6wCC2OPOiN0nDIm6Qmqb9cUady6agUIy6YWVAn6mHlFftcizWcvAAVVPgFoMPiAU-m3EwFX1YSdBMO1uW7kfDxlnONL1tDOGyTWLJwHiymkQqtnEUdqi-C2MUgDcNVzkDtYR3qTtKP1sWx0aEJEUvKtHN34A_LAkxHcnRE1EUklobmFTFwvP2_16YipvSxij')">
+                </div>
+            </div>
+            <div class="relative z-20 text-center px-4 max-w-6xl">
+                <h1
+                    class="text-white text-6xl md:text-8xl lg:text-[10rem] font-black leading-[0.85] tracking-tighter uppercase italic drop-shadow-2xl">
+                    Partner With <br />
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue via-primary to-accent-magenta">The
+                        Culture</span>
+                </h1>
+                <p
+                    class="mt-8 text-white text-lg md:text-2xl max-w-2xl mx-auto font-medium tracking-wide uppercase drop-shadow-md">
+                    Ultra-Vibrant. Electric. Unstoppable. <br />
+                    Join the movement where sound meets the neon streets.
+                </p>
+                <div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
+                    <button
+                        class="bg-accent-magenta text-white px-12 py-6 rounded-full font-black text-xl hover:scale-105 transition-transform uppercase tracking-widest shadow-[0_0_40px_rgba(255,0,255,0.4)]">
+                        Get Started
+                    </button>
+                    <button
+                        class="border-2 border-white/50 backdrop-blur-sm text-white px-12 py-6 rounded-full font-black text-xl hover:bg-white hover:text-background-dark transition-all uppercase tracking-widest">
+                        View Media Kit
+                    </button>
+                </div>
+            </div>
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
+                <span
+                    class="material-symbols-outlined text-white text-4xl animate-bounce">keyboard_double_arrow_down</span>
+            </div>
+        </section>
+
+        <section class="py-32 px-6 lg:px-20 bg-background-dark relative">
+            <div
+                class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-magenta/50 to-transparent">
+            </div>
+            <h2 class="text-5xl md:text-7xl font-black mb-16 uppercase tracking-tighter italic text-center">
+                The <span class="text-accent-blue">Vibrant</span> <span class="text-primary">Vibe</span>
+            </h2>
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+                <div class="relative group overflow-hidden rounded-2xl vibe-glow-blue bg-slate-800">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlC4hJmJBTQ3iANYBspNq22PhVWQM8KnTKj1lacTmMwDCcmhyxCjNtjd8uKA3o25lzxPG-v4pdoK3i5OJS22n9mFDgjTDECEkt8fuKNEwqlWZPSyK1iDJqQcIyJoA4HZOp_V9jIcfTzBs_kRVVLxFBB8qT31Dt0WEZZr47qo8MqkjCpaX8KapcddN4hAMNbpbeD5FOtQgDmpge1YjG6gloApXua-IRKeSdciaebkkCU8gwhDZFuV3n4VoOUPGS8KH7sRUZwewV9L3n" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-accent-blue/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                        <span class="text-white font-black text-3xl uppercase tracking-tighter">Partnership
+                            Moment</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl vibe-glow-violet aspect-square bg-slate-800">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzYOPi0NSc1NSD1s9fqD17_qHxHd2AXOP-OFoXkR4_QD70hLjDNbp3SJ8uxxA0AH9zkA6nWY0cZtHtMreWgnszn8yib41YIp6HZk9BQmFMQ_8521ghO20DkHYCBuoFQPlK8kAfMU8LwTWCejd6z9hpCTHw3O0JzZ8mYZ5TcbDwLGvD-kjQm_WRfZLsX2ZYSHjX_75lSR0vFX38kQ8SH5HkaOrtQZP_lqgQzyBHauXNZ5cR6pA0oX_9EmJJnL7GPD7fKjSk7VVg_BaM" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                        <span class="text-white font-black text-3xl uppercase tracking-tighter">Partnership
+                            Moment</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl vibe-glow-blue aspect-[3/4] bg-slate-800">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAG8UYGKcv8mpCGX9HVXXayQ1EjgrVmX4EzPq-5pyIANxsJwQpb8CGcUeienBfizIg7I_opnYp0LfkVr5IMaVcD3PCl6GFahu9lH0KPrmtELYQD1e8VnNhMkC8zkAujHE-TddeMe9_vKqz9qA9RZKnz90MkBdqWYQjGdaRW_hlythogKCz-Mg-qoQ68bDDhPu7qyStHvSnwhG2JvLn2ztndjDkTdbSrK5b2sM2H-6tc54ctyiNHV9QkmMvU9erjoKohZMp8m-fWorT" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-accent-blue/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                        <span class="text-white font-black text-3xl uppercase tracking-tighter">Partnership
+                            Moment</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl vibe-glow-violet aspect-square bg-slate-800">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3TS9E1dP4KYHxWs0hovvkJN_2GX1AOwVVCR79dVc0Y3qQOjptD6vG7IDDd78AIZXp_9edJho3jDpixjS0LEG_m_DhuL34QATvG1TMl69VasrTBeuSCWSGrVgfpv6_1rpCcyHLmurLuJ-5MK_SPvWFkfBcYs4wmHUi55snFsT2GYq-4Ae8dL3ynSpArcCWAojLht1zaNfz7ZPY7aQ_INjJ-0z_pptihLxn5-23Nee9zmCXb6d0QabBpIwvSXNQsu49hIYB-tk7djWP" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                        <span class="text-white font-black text-3xl uppercase tracking-tighter">Partnership
+                            Moment</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl vibe-glow-blue bg-slate-800">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBWnWJKiRj8LUvQCpHNGJfEJMF4RwiJ8iHX3_QZszp8vGHoHJVSZMS4L3_EHHnxmgrYtsn2EsKZ_SA9mIc5yo94w-8kmcekhDtzMK7ZeD5ubfIfbI4jPAZX6z_Dn4TpCYMndeQ4e0dBagiaHzdxaT5NxI_r7tWEGpf5_fKMYwHywo8ZA6nslpMfQy38LYb1Ye49LEa5KH4yfhqnNRdGf27ZaAcykfE_jAbp56BXfrkZMo8YCoIuHN7we3tiQswGXZn2NA1lAiBT1G_" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-accent-magenta/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                        <span class="text-white font-black text-3xl uppercase tracking-tighter">Partnership
+                            Moment</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 px-6 lg:px-20 relative bg-background-dark overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
+            <h2 class="text-5xl md:text-7xl font-black mb-20 uppercase tracking-tighter text-right italic">
+                Our <span class="text-accent-magenta">Services</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div
+                    class="group h-[600px] flex flex-col justify-end relative overflow-hidden rounded-3xl cursor-pointer border border-white/10 shadow-2xl">
+                    <div class="absolute inset-0 z-0">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASICGCKWABhw8i68nX28qRafK9Hs6YJkWuUSJWMpP_SSEHcnTz3evFr5tXaGOboNkOmM35ulJc1BZ9dHWjf71Jq85gGBt_JauEiXGSxXUy2Gv18-U96BuC7q-mxvzS6b18LUa6u3jM5-KPZ8mVN7Z3BAU7f9rfqPSLWuuwTPYdlEZ72CrudQw66PuH73h8iMPLJoFxtoT3onGXNX3AuMIdUB8yN9p5xaySAc1imER7cOugg3dB6PAeELPEVuTtq9ZBIAmuSQDe60Rv')">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark via-accent-blue/40 to-transparent">
+                        </div>
+                    </div>
+                    <div class="relative z-10 p-10 bg-background-dark/20 backdrop-blur-md border-t border-white/10">
+                        <h3
+                            class="text-4xl font-black mb-4 uppercase tracking-tighter text-white drop-shadow-[0_0_10px_rgba(0,212,255,0.8)]">
+                            Media Activations</h3>
+                        <p class="text-slate-100 leading-relaxed font-medium">Multi-platform broadcast sponsorship,
+                            custom audio
+                            spots, and digital takeover opportunities across our growing network.</p>
+                        <div class="mt-8 w-full h-1.5 bg-accent-blue shadow-[0_0_15px_rgba(0,212,255,1)]"></div>
+                    </div>
+                </div>
+                <div
+                    class="group h-[600px] flex flex-col justify-end relative overflow-hidden rounded-3xl cursor-pointer border border-white/10 shadow-2xl">
+                    <div class="absolute inset-0 z-0">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDps3C00VpBWuB_oGp_RqHnHO0QEWgjROnxhUnFn2tGtNZucEcuz0JJXWtT3w2Wdi1WsEAU2z1OBgcE-VgRTuQmW4WPXmIe4GsKtdwp2LNfncNoYBuHSWoRJZz_MmekQJyi01hufQO-uaZDpmsqyHvB2Olg6X-2Yy2K6Pacm_7Ra5Njc1cVz1bntMIQ1KLFTDNPhrPPTdcRQZEBjbUQ7_YgB0cVLTOxUZijrdxgfn_CD0ssscgFY53nWk_MBLaNIXfXzjpKo7zsKZqh')">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark via-primary/40 to-transparent">
+                        </div>
+                    </div>
+                    <div class="relative z-10 p-10 bg-background-dark/20 backdrop-blur-md border-t border-white/10">
+                        <h3
+                            class="text-4xl font-black mb-4 uppercase tracking-tighter text-white drop-shadow-[0_0_10px_rgba(127,13,242,0.8)]">
+                            Live Integration</h3>
+                        <p class="text-slate-100 leading-relaxed font-medium">On-the-ground event presence, VIP area
+                            branding,
+                            and live stage announcements at the year's biggest cultural moments.</p>
+                        <div class="mt-8 w-full h-1.5 bg-primary shadow-[0_0_15px_rgba(127,13,242,1)]"></div>
+                    </div>
+                </div>
+                <div
+                    class="group h-[600px] flex flex-col justify-end relative overflow-hidden rounded-3xl cursor-pointer border border-white/10 shadow-2xl">
+                    <div class="absolute inset-0 z-0">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCjXMtVerDQhF9aHPUoO1E1p6t36iMjN2G6hBBKJIrgu58cXicIDfqoRSlYxY3wCz6EBGQ9hF23BUWck4oyc0lkkKEFWs_2UNEjfPF6on8K2sVleFBIwQLDnthl_PIzrfhoAL08sxpscIIsvZCseuY29zVcnBtag-NZgoSJ337w8PKTrWVIKlsMUfwNPADf51RV2GyighAiGQrgtP87NqPTgPnxnbtJ1ilo10G0daQiJcKU2qGY0RN1Gfxi9gwsLFJHcybfKR6q6Sve')">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark via-accent-magenta/40 to-transparent">
+                        </div>
+                    </div>
+                    <div class="relative z-10 p-10 bg-background-dark/20 backdrop-blur-md border-t border-white/10">
+                        <h3
+                            class="text-4xl font-black mb-4 uppercase tracking-tighter text-white drop-shadow-[0_0_10px_rgba(255,0,255,0.8)]">
+                            Youth Engagement</h3>
+                        <p class="text-slate-100 leading-relaxed font-medium">Direct connection to Gen Z and Alpha
+                            demographics
+                            through authentic storytelling and street-level activations.</p>
+                        <div class="mt-8 w-full h-1.5 bg-accent-magenta shadow-[0_0_15px_rgba(255,0,255,1)]"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 bg-[#05020a] overflow-hidden grainy-overlay">
+            <div class="px-6 lg:px-20 mb-12">
+                <h2 class="text-2xl font-black uppercase tracking-widest text-accent-magenta flex items-center gap-6">
+                    <span class="w-24 h-[3px] bg-accent-magenta shadow-[0_0_10px_rgba(255,0,255,0.5)]"></span>
+                    Behind The Scenes
+                </h2>
+            </div>
+            <div class="flex gap-8 px-6 lg:px-20 overflow-x-auto pb-10 no-scrollbar">
+                <div
+                    class="flex-none w-[450px] aspect-video rounded-3xl bg-slate-800 overflow-hidden relative group border-2 border-white/5">
+                    <img class="w-full h-full object-cover transition-all duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC17JNM_OKixHOL3_XJQg01kOq52CYIvYtiOxNrDM4t0URp69wlwuyNb0F7KuHxUMrMDq6HGzbRrlWctDFT2oEDkp67QbTRIh3mtGl-WsPEVFH38WC2Im5tF_su0iq-XVky8MohRAN5K1DyjrYSmYQcfqgu-EGfpXC4bAFArxgb8Z7xeJNm_04dACSncakFhvf7gbarL5J_6or5bOk7FngBGtb_wl-JIe_tC3Xvc1hTpKVjpODTIP_t5kqYsBJovqVDkwIzCA4YIqF6" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+                        <div class="text-white font-black uppercase italic tracking-tighter text-2xl">Moments that
+                            matter</div>
+                    </div>
+                </div>
+                <div
+                    class="flex-none w-[450px] aspect-video rounded-3xl bg-slate-800 overflow-hidden relative group border-2 border-white/5">
+                    <img class="w-full h-full object-cover transition-all duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8012K6NGPm1jArPRPgHHDN1MLLOVQ6Ls0wdpW_fpRav-oJs7omnERrehWAVy56tU8ZJcamQZLc0CzlxpxBqfJq6TmI-hPhxXTY9FUhgb_Iy8K8J2ut4mJOS2zc-fMLeYYQYHNhy79dhRa3f93zFCSFYNnKExjhaNUT7nxbHKN9Uhm69GE8x-3dG3AhJogMrWnomq3TsHkqTxaElM1i6JwfFVGObDdhCT-wbIyyiZnG-DmaQr79rlr5l2MXE1caxrMRJG-m_Qx5q-5" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-8">
+                        <div class="text-white font-black uppercase italic tracking-tighter text-2xl">Moments that
+                            matter</div>
+                    </div>
+                </div>
+                <div
+                    class="flex-none w-[450px] aspect-video rounded-3xl bg-slate-800 overflow-hidden relative group border-2 border-white/5">
+                    <img class="w-full h-full object-cover transition-all duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZC_1MP-R0YSQKMsnITahjkLWB2oP610W7K6mD603U3GNskGFSnTS28O2I19iO2R1dkUcZm5R8ffyz0hJwlE9woQb1N7TxmVhTCXFM1V9hr2hQDxx-ovcHjbDvY940bLaBry_XFd4AaDH6OTAhJU04KVgJ50WRhCnckbrghLmc-p-1WuGTVcWjyGF0a7bCrMMY7mbPMZJH8oQqSElWCwfFnr2p8Oj28dT_1Y5HzFOUjjreq0GZSdmcxzdEfaDmfbbxexvF5z-yR7V6" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-accent-magenta/60 to-transparent flex items-end p-8">
+                        <div class="text-white font-black uppercase italic tracking-tighter text-2xl">Moments that
+                            matter</div>
+                    </div>
+                </div>
+                <div
+                    class="flex-none w-[450px] aspect-video rounded-3xl bg-slate-800 overflow-hidden relative group border-2 border-white/5">
+                    <img class="w-full h-full object-cover transition-all duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmto_hu9lCRRTKetPIoQrU_mvYYA-eJhxWZiyo8KmIo9399UA9MTx923hqhvjDfLajhhN5B-bhh1UfnHKQdLfMtjU9Zq3y7AW0n21VpsJp4F4eEU4Loy3uR7QZHzWOa-__xqKN7F0YgIm5hYaq78t8Dw2l07vC1Cv_EBFX1Oiqt8TfPm2c1pLaVNXnEDYNDXgr_rBbVbztirSgM8ntWridoGRY3zK8IJ-ORi374tQXDvI8e6_QANNnWrO5gjiqQ66j0Cu4fFSMv5Jw" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-accent-blue/60 to-transparent flex items-end p-8">
+                        <div class="text-white font-black uppercase italic tracking-tighter text-2xl">Moments that
+                            matter</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-[#0a0510] border-y border-white/5 relative overflow-hidden">
+            <div class="marquee">
+                <div class="marquee-content animate-scroll">
+                    <span
+                        class="text-5xl font-black text-accent-blue/40 drop-shadow-[0_0_10px_rgba(0,212,255,0.3)] hover:text-accent-blue transition-all uppercase tracking-tighter cursor-default px-8">UrbanWave</span>
+                    <span
+                        class="text-5xl font-black text-primary/40 drop-shadow-[0_0_10px_rgba(127,13,242,0.3)] hover:text-primary transition-all uppercase tracking-tighter cursor-default px-8">NeonPulse</span>
+                    <span
+                        class="text-5xl font-black text-accent-magenta/40 drop-shadow-[0_0_10px_rgba(255,0,255,0.3)] hover:text-accent-magenta transition-all uppercase tracking-tighter cursor-default px-8">StreetBeat</span>
+                    <span
+                        class="text-5xl font-black text-accent-blue/40 drop-shadow-[0_0_10px_rgba(0,212,255,0.3)] hover:text-accent-blue transition-all uppercase tracking-tighter cursor-default px-8">CoreCulture</span>
+                    <span
+                        class="text-5xl font-black text-primary/40 drop-shadow-[0_0_10px_rgba(127,13,242,0.3)] hover:text-primary transition-all uppercase tracking-tighter cursor-default px-8">SoundHive</span>
+                    <span
+                        class="text-5xl font-black text-accent-magenta/40 drop-shadow-[0_0_10px_rgba(255,0,255,0.3)] hover:text-accent-magenta transition-all uppercase tracking-tighter cursor-default px-8">VibeNetwork</span>
+                </div>
+                <div class="marquee-content animate-scroll">
+                    <span
+                        class="text-5xl font-black text-accent-blue/40 drop-shadow-[0_0_10px_rgba(0,212,255,0.3)] hover:text-accent-blue transition-all uppercase tracking-tighter cursor-default px-8">UrbanWave</span>
+                    <span
+                        class="text-5xl font-black text-primary/40 drop-shadow-[0_0_10px_rgba(127,13,242,0.3)] hover:text-primary transition-all uppercase tracking-tighter cursor-default px-8">NeonPulse</span>
+                    <span
+                        class="text-5xl font-black text-accent-magenta/40 drop-shadow-[0_0_10px_rgba(255,0,255,0.3)] hover:text-accent-magenta transition-all uppercase tracking-tighter cursor-default px-8">StreetBeat</span>
+                    <span
+                        class="text-5xl font-black text-accent-blue/40 drop-shadow-[0_0_10px_rgba(0,212,255,0.3)] hover:text-accent-blue transition-all uppercase tracking-tighter cursor-default px-8">CoreCulture</span>
+                    <span
+                        class="text-5xl font-black text-primary/40 drop-shadow-[0_0_10px_rgba(127,13,242,0.3)] hover:text-primary transition-all uppercase tracking-tighter cursor-default px-8">SoundHive</span>
+                    <span
+                        class="text-5xl font-black text-accent-magenta/40 drop-shadow-[0_0_10px_rgba(255,0,255,0.3)] hover:text-accent-magenta transition-all uppercase tracking-tighter cursor-default px-8">VibeNetwork</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative py-48 flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0 scale-110">
+                <div class="w-full h-full bg-cover bg-fixed bg-center"
+                    style="background-image: linear-gradient(rgba(10,4,20,0.6), rgba(10,4,20,0.8)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-kWJauI5motVu-Lxc1KRjukLUG8BycCKq7F3_EE78TTh1wSqoWoKV2DmNCyTTMYQOWF2riCDZLaDwway3Q-m8xeJN46_BaK60lCE5_DqtNNV31JaLVkVgQBxOE2qybU6_IXJkDlRvhEImS1KrVriX3ukqkyfPsbre74_e282YhSf5Sk5FGIx-w4K9D-HeWJtxSRpNch3DNbgnFapxZEO82RpcDfFqW-EsE76wG58AnSHD7hwDQi-w9Tv6_H9pLRsT0TapzyuNpCG2')">
+                </div>
+                <div
+                    class="absolute inset-0 bg-gradient-to-tr from-accent-magenta/30 via-transparent to-accent-blue/30">
+                </div>
+            </div>
+            <div class="relative z-10 text-center px-6">
+                <h2 class="text-6xl md:text-9xl font-black uppercase italic tracking-tighter mb-16 drop-shadow-2xl">
+                    Ready to make <br /> <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-magenta">History?</span>
+                </h2>
+                <button
+                    class="relative group p-[3px] rounded-full overflow-hidden transition-all hover:scale-110 shadow-[0_0_50px_rgba(127,13,242,0.5)]">
+                    <div class="absolute inset-0 bg-gradient-to-r from-accent-blue via-accent-magenta to-primary"></div>
+                    <div
+                        class="relative bg-white text-background-dark px-16 py-8 rounded-full font-black text-3xl uppercase tracking-widest transition-colors group-hover:bg-transparent group-hover:text-white">
+                        Let’s Collaborate
+                    </div>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Site Footer (Standardized with Index.html) -->
+    <footer class="bg-primary/10 border-t border-primary/20 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 text-primary mb-8">
+                        <span class="material-symbols-outlined text-4xl font-bold">radio</span>
+                        <h2 class="text-3xl font-black italic tracking-tighter">ONE TREES RADIO</h2>
+                    </div>
+                    <p class="text-slate-400 max-w-sm mb-8 font-medium">The digital pulse of the city. We are more than
+                        a radio station; we are a community hub for the next generation of creative pioneers.</p>
+                    <div class="flex gap-4">
+                        <a class="size-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-white">share</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-white">public</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-white">mail</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-black uppercase tracking-widest mb-6">EXPLORE</h4>
+                    <ul class="space-y-4 font-bold text-sm text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="index.html">LIVE STREAM</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">SCHEDULE</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">ARCHIVES</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">NEWS</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black uppercase tracking-widest mb-6">COMMUNITY</h4>
+                    <ul class="space-y-4 font-bold text-sm text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="community.html">JOIN US</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="workshops.html">WORKSHOPS</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="creators.html">CREATORS</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">DONATE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-primary/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <p class="text-xs font-bold text-slate-500">© 2024 ONE TREES RADIO. POWERED BY THE YOUTH.</p>
+                <div class="flex gap-8 text-xs font-bold text-slate-500">
+                    <a class="hover:text-white" href="#">PRIVACY POLICY</a>
+                    <a class="hover:text-white" href="#">TERMS OF SERVICE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

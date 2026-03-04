@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html class="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>One Trees Radio - The Future of Culture</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8c2bee",
+                        "accent-lime": "#bef264",
+                        "accent-pink": "#f472b6",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-marquee {
+            display: flex;
+            width: 200%;
+            animation: scroll 20s linear infinite;
+        }
+
+        .glass-card {
+            background: rgba(140, 43, 238, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(140, 43, 238, 0.2);
+        }
+
+        .brutalist-border {
+            border: 3px solid currentColor;
+            box-shadow: 4px 4px 0px 0px currentColor;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-white">
+
+    <!-- Top Navigation -->
+    <header
+        class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/20">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-10">
+                <a href="index.html" class="flex items-center gap-3 text-primary">
+                    <span class="material-symbols-outlined text-4xl font-bold">radio</span>
+                    <h1 class="text-2xl font-black tracking-tighter italic">ONE TREES RADIO</h1>
+                </a>
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="index.html">HOME</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors"
+                        href="workshops.html">WORKSHOPS</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="creators.html">CREATORS</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors"
+                        href="community.html">COMMUNITY</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="partners.html">PARTNERS</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors"
+                        href="advertise.html">ADVERTISE</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-6">
+                <button
+                    class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide transition-transform active:scale-95">
+                    JOIN THE MOVEMENT
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-8">
+        <!-- Hero Section -->
+        <section class="grid lg:grid-cols-12 gap-6 mb-12">
+            <!-- Left: Player -->
+            <div
+                class="lg:col-span-5 bg-primary/20 rounded-xl p-8 flex flex-col justify-between border-2 border-primary/30 relative overflow-hidden">
+                <div class="relative z-10">
+                    <div class="flex items-center gap-2 mb-6">
+                        <span class="flex h-3 w-3 rounded-full bg-red-500 animate-pulse"></span>
+                        <span class="text-xs font-black uppercase tracking-widest text-red-500">Listen Live Now</span>
+                    </div>
+                    <div class="aspect-square w-full rounded-lg mb-6 overflow-hidden shadow-2xl">
+                        <img class="w-full h-full object-cover" alt="Close up of a young DJ with headphones performing"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMINlFZ1dak1LRlAJA0D7phwLOWzZGoG-HvJl8gX0BjjVPf4P05KzBwijAq9CF48qlyHRECNiLf9XQLTd3emkNFe05iiPOixsnPwFFsH9XWSB9rvIrycikJ62WeYBJbIz8CcSxHzmjq_1N1fiZ_d4LjAtC3PjS8-wF7kOchlQqODV4iF-YiLI6Hc_AL92OWr7lOf0X8qUfwHgPMTTnTwB67TclssFkTwuDbGhhAtI5sxwLdlQSyYe6XNb5FfSf1xWeAVFu3lS_klrG" />
+                    </div>
+                    <h2 class="text-3xl font-black mb-2">MIDNIGHT VIBES</h2>
+                    <p class="text-primary font-bold text-lg mb-8 uppercase tracking-tight">Hosted by DJ X-TREME</p>
+                    <!-- Visualizer -->
+                    <div class="flex items-end gap-1 h-12 mb-8">
+                        <div class="w-2 bg-primary h-4"></div>
+                        <div class="w-2 bg-primary h-8"></div>
+                        <div class="w-2 bg-primary h-12"></div>
+                        <div class="w-2 bg-primary h-6"></div>
+                        <div class="w-2 bg-primary h-10"></div>
+                        <div class="w-2 bg-primary h-5"></div>
+                        <div class="w-2 bg-primary h-11"></div>
+                        <div class="w-2 bg-primary h-7"></div>
+                    </div>
+                </div>
+                <button
+                    class="relative z-10 w-full bg-white dark:bg-slate-100 text-background-dark py-4 rounded-lg font-black text-xl flex items-center justify-center gap-3 hover:bg-accent-lime transition-colors">
+                    <span class="material-symbols-outlined fill-current">play_arrow</span>
+                    START LISTENING
+                </button>
+                <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-primary/30 blur-[100px] rounded-full"></div>
+            </div>
+            <!-- Right: Studio Video -->
+            <div class="lg:col-span-7 rounded-xl overflow-hidden relative group">
+                <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent z-10"></div>
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    alt="High energy radio studio with multiple monitors and young creators"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3CPeQyUJgFqWgsUtNqtCQHyD9FCt1szEP9v4zRgmBkjmDog8AQ2JZUEKD8ec5XwwrDy5FOQOEs2ouAbR8mwrkuVhDVD5iPsWt1yDjUhU8VfGGa7FyWASPm7xAsLIqebeepMqCLnbSFYipI0aQ768o8nxWo2XEoxBZV3xBRG_oD4YCzyaq87C3IL2soC0dAWM9FbATdh9Vbsvb3yTE2xbsGU2go_qFeHvs9qsVIeZzhsawxyvKdFs2zXU3hIbfgtM2ohKo2uTvJvDa" />
+                <div class="absolute bottom-8 left-8 z-20 max-w-lg">
+                    <h1 class="text-5xl font-black mb-4 leading-[0.9] tracking-tighter">THE FUTURE OF <span
+                            class="text-accent-lime">CULTURE</span> IS HERE.</h1>
+                    <p class="text-lg text-slate-300 font-medium">Empowering the next generation of storytellers,
+                        beatmakers, and change-drivers in the heart of the city.</p>
+                </div>
+                <div class="absolute top-8 right-8 z-20">
+                    <div
+                        class="bg-black/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-accent-pink">videocam</span>
+                        <span class="text-xs font-bold text-white uppercase">Studio Cam 01</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Marquee -->
+        <section class="overflow-hidden bg-primary py-4 -mx-6 mb-16 rotate-[-1deg]">
+            <div class="animate-marquee whitespace-nowrap">
+                <span class="text-4xl font-black text-white mx-8 uppercase">AMAPIANO • AFROBEATS • HIP-HOP • LIVE NOW •
+                    JOIN THE HUB • </span>
+                <span class="text-4xl font-black text-white mx-8 uppercase">AMAPIANO • AFROBEATS • HIP-HOP • LIVE NOW •
+                    JOIN THE HUB • </span>
+                <span class="text-4xl font-black text-white mx-8 uppercase">AMAPIANO • AFROBEATS • HIP-HOP • LIVE NOW •
+                    JOIN THE HUB • </span>
+            </div>
+        </section>
+        <!-- Live Sessions Grid -->
+        <section class="mb-20">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-4xl font-black tracking-tighter italic">LIVE SESSIONS</h2>
+                <a class="text-primary font-bold hover:underline flex items-center gap-2" href="#">VIEW ALL <span
+                        class="material-symbols-outlined">arrow_forward</span></a>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Tile 1 -->
+                <div class="relative aspect-[3/4] rounded-xl overflow-hidden group">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        alt="Singer performing in a professional microphone setup"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxJV0pSYMK4QR-4DrkvGNkHE95YUufYIamqfAjH1Oah_Nrt_qOCOCpuNC21sSrTRO2S95KQoJGCZpIeRybybYLFdk9sA5G1QgtsOM4xiY7avlnzROq2OAiie9l1xXa2BBnTBcJTcTjvHv8vleVODJ0eHOwIvf-2hXfyr-MoUkCyUJffUMeRFj-daqKcMUMCXkWzXc9w-_zhRebkhNMl0-fcuiKZfLaeJnLQ69c_KH2b7PD6u2kloRDr64wDKySMuTfDnO6fEFTVdKH" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent opacity-80">
+                    </div>
+                    <div class="absolute top-4 left-4 bg-red-600 text-white text-[10px] font-black px-2 py-1 rounded">
+                        LIVE</div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <p class="text-xs font-bold text-accent-lime uppercase mb-1">Acoustic Lounge</p>
+                        <h3 class="text-xl font-black leading-tight">NEO-SOUL SUNDAYS</h3>
+                    </div>
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="bg-primary text-white size-16 rounded-full flex items-center justify-center">
+                            <span class="material-symbols-outlined text-4xl fill-current">play_arrow</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tile 2 -->
+                <div class="relative aspect-[3/4] rounded-xl overflow-hidden group">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        alt="Two people discussing on a podcast in a studio"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAudXEhfWSuREeBAzZrEGDwfQ8-MY9js4A4GI7Y3v7JwYoXe-JjeUYImwa1mN4UvIQ1UTCzeqKCnv8FHL9Jabe0WLx2kF6Ksjll_cjJM1u9UDZ108f9CuLNYlh01icBTMERdwIvsh4nWpqxh7WlF2dbfFpSGGMirsZw_2XwOGdDgdVN7jdpmXtjfGvf2afIkA7VUWfruvz3AyfHdnUeBtFYTD1_W8JVApMbQ9wJySf172G5d1bhPG49pE9nGkFdngdfuHIehI9n5tLR" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent opacity-80">
+                    </div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <p class="text-xs font-bold text-accent-pink uppercase mb-1">Talk Radio</p>
+                        <h3 class="text-xl font-black leading-tight">THE YOUTH DEBATE</h3>
+                    </div>
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="bg-primary text-white size-16 rounded-full flex items-center justify-center">
+                            <span class="material-symbols-outlined text-4xl fill-current">play_arrow</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tile 3 -->
+                <div class="relative aspect-[3/4] rounded-xl overflow-hidden group">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        alt="Crowd hands up at a music festival concert"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlatIBOVKCUPCpydZAC0_MdCVPolao7duRAITNcbfMOVY_WQvrpYylCjr-bPCV0ZQyuOiIQtaxzUCCtsA3ZmzmwjGVD3KyaG9Im7DIeZMXC5eHlar97rU9jk9l1KJabz0yjCXzn6CaCyMGGbqLDoX1GIYjL6RFAuz0xGLYUjnwCTejjLgyow52cu3H2WtXSRFndrDqQazYA8BkV2C4p_Xd7-PbabyucJnq40HrIXxMJLD6v-ICQ-aFfDd_riR0w1D0oUhe7COJhSzK" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent opacity-80">
+                    </div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <p class="text-xs font-bold text-primary uppercase mb-1">Event Stream</p>
+                        <h3 class="text-xl font-black leading-tight">BLOCK PARTY LIVE</h3>
+                    </div>
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="bg-primary text-white size-16 rounded-full flex items-center justify-center">
+                            <span class="material-symbols-outlined text-4xl fill-current">play_arrow</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tile 4 -->
+                <div class="relative aspect-[3/4] rounded-xl overflow-hidden group">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        alt="Modern radio equipment and mixing board"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvuKAfde0j4QsZnRC2nSvNgNXeRg06gqlheU87WFTY2C4nChlNedxAM3BnPB1KmqafG-KcJfAqzXoxD2gZEYp5Sbxhb5e2UoajPdVkobiHTHe8njPQK7iVHDvK8Km0m7Fq2v2q0vW5WkeI-Cw8YvlPgcDeCm4m_YYz0QYCONt9QkoNG_WBlFYwLNpWNl_MsmN3Tx7ZCbo7IFUxSllNai9yKPwwHfnIoNFP8XX5G8Fvwag4Fh7BOhHYWrakSdpuJMsuGDfc1Hvcace" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent opacity-80">
+                    </div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <p class="text-xs font-bold text-accent-lime uppercase mb-1">Music Mix</p>
+                        <h3 class="text-xl font-black leading-tight">TECHNO TAKEOVER</h3>
+                    </div>
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="bg-primary text-white size-16 rounded-full flex items-center justify-center">
+                            <span class="material-symbols-outlined text-4xl fill-current">play_arrow</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skills & Workshops -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-black tracking-tighter mb-4 italic">SKILLS &amp; WORKSHOPS</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto font-medium">Elevate your game with industry pros. Hands-on
+                    training for the next wave of creative leaders.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Workshop Card 1 -->
+                <div
+                    class="glass-card rounded-xl p-8 flex flex-col justify-between border-b-4 border-primary group hover:bg-primary/20 transition-all">
+                    <div>
+                        <span class="material-symbols-outlined text-5xl text-primary mb-6">podcasts</span>
+                        <h3 class="text-2xl font-black mb-4">Media Training</h3>
+                        <p class="text-slate-400 mb-8 font-medium">Master the mic. From interview techniques to
+                            broadcast ethics and scriptwriting.</p>
+                    </div>
+                    <button
+                        class="w-full py-4 border-2 border-primary text-primary font-black hover:bg-primary hover:text-white transition-colors">BOOK
+                        NOW</button>
+                </div>
+                <!-- Workshop Card 2 -->
+                <div
+                    class="glass-card rounded-xl p-8 flex flex-col justify-between border-b-4 border-accent-lime group hover:bg-accent-lime/10 transition-all">
+                    <div>
+                        <span class="material-symbols-outlined text-5xl text-accent-lime mb-6">graphic_eq</span>
+                        <h3 class="text-2xl font-black mb-4">DJ Masterclass</h3>
+                        <p class="text-slate-400 mb-8 font-medium">Beatmatching, phrasing, and set building. Learn on
+                            industry-standard Pioneer gear.</p>
+                    </div>
+                    <button
+                        class="w-full py-4 border-2 border-accent-lime text-accent-lime font-black hover:bg-accent-lime hover:text-background-dark transition-colors">BOOK
+                        NOW</button>
+                </div>
+                <!-- Workshop Card 3 -->
+                <div
+                    class="glass-card rounded-xl p-8 flex flex-col justify-between border-b-4 border-accent-pink group hover:bg-accent-pink/10 transition-all">
+                    <div>
+                        <span class="material-symbols-outlined text-5xl text-accent-pink mb-6">movie_edit</span>
+                        <h3 class="text-2xl font-black mb-4">Content Production</h3>
+                        <p class="text-slate-400 mb-8 font-medium">Vertical video, editing for TikTok/Reels, and digital
+                            storytelling fundamentals.</p>
+                    </div>
+                    <button
+                        class="w-full py-4 border-2 border-accent-pink text-accent-pink font-black hover:bg-accent-pink hover:text-white transition-colors">BOOK
+                        NOW</button>
+                </div>
+            </div>
+        </section>
+        <!-- Community Feed -->
+        <section class="mb-20 grid lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-8">
+                <h2 class="text-4xl font-black mb-8 italic">LATEST CLIPS</h2>
+                <div class="space-y-6">
+                    <div
+                        class="flex gap-6 items-center p-4 rounded-xl hover:bg-primary/5 border border-transparent hover:border-primary/20 transition-all">
+                        <div class="size-24 rounded-lg overflow-hidden shrink-0">
+                            <img class="w-full h-full object-cover" alt="Abstract musical performance frame"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjkFxyafoArj1t7kDm7R95VZwsBMLHzvuowTouhUIpRCOZOTeESAvzZsd5AHeQnuNWKRcjzgDf7gAc0cYUKuVFKElFM5dY5vhLhOo-KjB90DRHFEgUNyaEwiLWxtN-SUSi51tH2bWtaZf7V0_zIDkbba9RMz145WGHTesEACgua20cr0lG7KTMMYkKaQ8rG2ndblOjuwkOvGH9AcR5d3YfvQtQpLGGce9Rhkp2N1Nqgx2DmQpXx7-5y3P7GHCVFfKtRHCBdHGpjDfk" />
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <div
+                                    class="size-6 rounded-full bg-primary/20 flex items-center justify-center text-[10px] font-bold">
+                                    JD</div>
+                                <span class="text-xs font-bold text-slate-400">@jordan_beats • 2h ago</span>
+                            </div>
+                            <h4 class="text-lg font-black mb-1">The evolution of South African House music...</h4>
+                            <div class="flex items-center gap-4 text-slate-400 text-xs font-bold">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">visibility</span> 12.4k</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">favorite</span> 842</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="flex gap-6 items-center p-4 rounded-xl hover:bg-primary/5 border border-transparent hover:border-primary/20 transition-all">
+                        <div class="size-24 rounded-lg overflow-hidden shrink-0">
+                            <img class="w-full h-full object-cover" alt="Close up of a spinning record"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAitBb8UODbrQZKThUFRZxmkJQ47f0mjAQrkMKOAGnAcj6mnT2pfUyJu3ydUYYMlQA-U89149DInDM37Bh0CJXpKO5NlUujpSliXVfFlnjOhVi13xmsHnSaex-0FA6SAGeDLAhjNxQBScLsD1IrqHVS4IpFM050BCfOWPjpQmOR4B8j99qVh9bFzIceB0ETwf58gzmfZdCaT5pm91LIVQsl77_3nnw-_ys_h69KqilaQR_We_n7x_7BTdt6507WP3DqJK7NlUrZTliI" />
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <div
+                                    class="size-6 rounded-full bg-accent-lime/20 flex items-center justify-center text-[10px] font-bold">
+                                    MK</div>
+                                <span class="text-xs font-bold text-slate-400">@mimi_k • 5h ago</span>
+                            </div>
+                            <h4 class="text-lg font-black mb-1">How to start your own DIY radio station on a budget.
+                            </h4>
+                            <div class="flex items-center gap-4 text-slate-400 text-xs font-bold">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">visibility</span> 8.1k</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">favorite</span> 512</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-4">
+                <h2 class="text-4xl font-black mb-8 italic">TOP CREATORS</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div
+                        class="flex flex-col items-center text-center p-6 bg-primary/10 rounded-xl border-2 border-primary/20">
+                        <img class="size-20 rounded-full border-4 border-primary mb-4 object-cover"
+                            alt="Portrait of a young creator"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzfQp83OWZlFan4FGmj2tnpA1iA8cA58opgE3rJxdtsslv9vML4M2OLQ6XMmQ3JlL6u1s_X-0uz8lB4gD-Z1-umPyOLnz4bKR0WEA2tWAgn6oNXVQvCZWGPHWvuZ6o-DjVvEdGA0BG_1Yf7jwtBNh2WPZsltI13OLz-0MtSWjfRqvB3gEUsWGFyqoYgk69D58tutf8Kx5fa8jdh8HaTBP36pu5GTjxAaRavI2D_OZBWE1nTmbwe_m5nMw0Br04tProJu4fcrvj6BUl" />
+                        <h5 class="font-black text-sm uppercase">SARA VIBE</h5>
+                        <p class="text-[10px] font-bold text-primary mb-3">RADIO HOST</p>
+                        <button
+                            class="text-[10px] font-black bg-primary text-white px-4 py-1 rounded-full">FOLLOW</button>
+                    </div>
+                    <div
+                        class="flex flex-col items-center text-center p-6 bg-accent-lime/10 rounded-xl border-2 border-accent-lime/20">
+                        <img class="size-20 rounded-full border-4 border-accent-lime mb-4 object-cover"
+                            alt="Portrait of a male DJ"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMcxxYXiRLtgKzZALgc7qOpJ-PpCmoPo5nzv8WhfBmPPRYgXe0L0MioaIhAntUYN18aBALWl_R_t9PXVafm37jVI7YAJ34KMoeyHE2FehzIbq0ihTyJLO_hkY-lBBgekILw2iXGLII8OhqgFs6DjKaJpBhl5JPCMiYvMG_CvSdSJwONY-pzqhv6A2EEjdXopjy0UtfkrZoGRB8ehpoVtElbkU79iAqlbny8o41DAtKF2qwPJjXLxYmfv3wTiV-DIMpWt-TsT2SNLck" />
+                        <h5 class="font-black text-sm uppercase">DJ NOISE</h5>
+                        <p class="text-[10px] font-bold text-accent-lime mb-3">CURATOR</p>
+                        <button
+                            class="text-[10px] font-black bg-accent-lime text-background-dark px-4 py-1 rounded-full">FOLLOW</button>
+                    </div>
+                    <div
+                        class="flex flex-col items-center text-center p-6 bg-accent-pink/10 rounded-xl border-2 border-accent-pink/20">
+                        <img class="size-20 rounded-full border-4 border-accent-pink mb-4 object-cover"
+                            alt="Portrait of a young male creator"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-NoRz9zlmLBsDOf42dsOLgpM2G5yiptyPhT5Sj_1Mlz06SdBommXHt6SztOJZdG4NMDH9OjFdrQQbzO7lH1bGoBUvJwtNeFHyiRy0-6Ptr7tO0l45ZOgbZhzpPSij-c0ldR_rDpMhSLSLAvp9PCq0h_7_JPWYohzDrU_kjXfaAv4bvuSkXa9-N_0QTV-adcsLt7y0dn9ajPRLbSEJLf-E6Em-PDN4iU3XKU59Z9UQAlPWe_RM9AlxmcX4QurOXpRPK3dDKggj-XMe" />
+                        <h5 class="font-black text-sm uppercase">LEX BEATS</h5>
+                        <p class="text-[10px] font-bold text-accent-pink mb-3">PRODUCER</p>
+                        <button
+                            class="text-[10px] font-black bg-accent-pink text-white px-4 py-1 rounded-full">FOLLOW</button>
+                    </div>
+                    <div
+                        class="flex flex-col items-center text-center p-6 bg-primary/10 rounded-xl border-2 border-primary/20">
+                        <img class="size-20 rounded-full border-4 border-primary mb-4 object-cover"
+                            alt="Portrait of a female podcaster"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkebxAvtwcKbTiTFB5mp0hmVyOknuNPs8wTJrtNbBzqynveaZYStOGFzCFZMvHTTydMRNFusPeYe8ZUwVXVjsM3MDxxOyLlpNQ2kwC4Fx6vd5QQNgJefbqY1L2kwniyVAzQc2uKvKudeDVoGs6fTem2z31iLv1Cs7gXEhB3n-iPueW0aENLNfjrLEc0pvr78lG3gTloFvJh2ZaWRDyIV8Gcj3E_t6DZ2unag4piAzs7n-f7NZPG8ykkz6qiK7J1ZJFbj21QrcCWsf" />
+                        <h5 class="font-black text-sm uppercase">MIA TALKS</h5>
+                        <p class="text-[10px] font-bold text-primary mb-3">PODCASTER</p>
+                        <button
+                            class="text-[10px] font-black bg-primary text-white px-4 py-1 rounded-full">FOLLOW</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary/10 border-t border-primary/20 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 text-primary mb-8">
+                        <span class="material-symbols-outlined text-4xl font-bold">radio</span>
+                        <h2 class="text-3xl font-black italic tracking-tighter">ONE TREES RADIO</h2>
+                    </div>
+                    <p class="text-slate-400 max-w-sm mb-8 font-medium">The digital pulse of the city. We are more than
+                        a radio station; we are a community hub for the next generation of creative pioneers.</p>
+                    <div class="flex gap-4">
+                        <a class="size-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-white">share</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-white">public</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-white">mail</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-black uppercase tracking-widest mb-6">EXPLORE</h4>
+                    <ul class="space-y-4 font-bold text-sm text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="index.html">LIVE STREAM</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">SCHEDULE</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">ARCHIVES</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">NEWS</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black uppercase tracking-widest mb-6">COMMUNITY</h4>
+                    <ul class="space-y-4 font-bold text-sm text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="community.html">JOIN US</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="workshops.html">WORKSHOPS</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="creators.html">CREATORS</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">DONATE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-primary/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <p class="text-xs font-bold text-slate-500">© 2024 ONE TREES RADIO. POWERED BY THE YOUTH.</p>
+                <div class="flex gap-8 text-xs font-bold text-slate-500">
+                    <a class="hover:text-white" href="#">PRIVACY POLICY</a>
+                    <a class="hover:text-white" href="#">TERMS OF SERVICE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/layout.js"></script>
+</body>
+
+</html>

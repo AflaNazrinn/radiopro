@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>One Trees Workshops: Unified Edition</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#bf00ff", // Electric Purple / Violet
+                        "electric-purple": "#bf00ff",
+                        "acid-cyan": "#00f5ff",
+                        "accent-pink": "#f472b6",
+                        "accent-gold": "#fbbf24",
+                        "background-dark": "#0a0a0c",
+                        "charcoal": "#121214",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        .grainy-bg {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            opacity: 0.05;
+        }
+        .brutalist-border {
+            border: 4px solid currentColor;
+        }
+        .text-outline {
+            -webkit-text-stroke: 1px currentColor;
+            color: transparent;
+        }
+        /* Custom Header/Footer Glassmorphism Styles to match Home */
+        .header-glass {
+            background: rgba(25, 16, 34, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(140, 43, 238, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark font-display text-slate-100 selection:bg-primary selection:text-black">
+
+    <!-- Top Navigation (Restored to Glassmorphism) -->
+    <header class="sticky top-0 z-50 bg-background-dark/80 backdrop-blur-md border-b border-primary/20">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-10">
+                <a href="index.html" class="flex items-center gap-3 text-primary">
+                    <span class="material-symbols-outlined text-4xl font-bold">radio</span>
+                    <h1 class="text-2xl font-black tracking-tighter italic">ONE TREES RADIO</h1>
+                </a>
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="index.html">HOME</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors"
+                        href="workshops.html">WORKSHOPS</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="creators.html">CREATORS</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors"
+                        href="community.html">COMMUNITY</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="partners.html">PARTNERS</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors"
+                        href="advertise.html">ADVERTISE</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-6">
+                <button
+                    class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide transition-transform active:scale-95">
+                    JOIN THE MOVEMENT
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="relative w-full aspect-[21/9] overflow-hidden bg-black flex items-center justify-center">
+            <div class="absolute inset-0 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
+                <img class="w-full h-full object-cover"
+                    alt="Massive video background of a busy professional radio studio"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGXFIk_nH3EW5DnEyHrwM-RAtub-eVFa9__I0SIZInJ74Tdqv18q3y62ubzS3E9KxF9N3j0OOaYMLpXNNkZlhWVJzuS2iQ4a8HffYogxDZQXBDxHxJByqxOEqPeLmhSnw9uRJVRayl6oYyLhitDFYGdSpYgr0sme7aYgfECmzNv6DKclMHMh3H5OkfMNzIuNhUYih-l6skjAg2DVObU1HunPiMikYo2uWBikpb8ISm5Qak3d-eRaLoKqBlBa0yLy1D407CHwAIB9iT" />
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background-dark/20 to-background-dark">
+            </div>
+            <div class="relative z-10 text-center px-4">
+                <h1 class="text-white text-6xl md:text-9xl font-black uppercase leading-[0.85] tracking-tighter">
+                    One Trees<br /><span class="text-primary italic">Workshops</span>
+                </h1>
+                <div class="mt-8">
+                    <button
+                        class="rounded-full bg-primary/20 backdrop-blur-md p-6 border-2 border-primary text-primary hover:bg-primary hover:text-black transition-all">
+                        <span class="material-symbols-outlined !text-5xl">play_arrow</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-6 md:p-12 relative bg-charcoal">
+            <div class="absolute inset-0 grainy-bg pointer-events-none"></div>
+            <h2 class="text-4xl font-black uppercase mb-12 border-l-8 border-electric-purple pl-4 tracking-tighter">The
+                Grid</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group relative aspect-square overflow-hidden bg-slate-900 border-4 border-primary">
+                    <img class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700"
+                        alt="Podcast session with high-end microphones"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPIQ3Bu6lkSolo3GfCa64rrPMi75KZ6eP6jNs3IC-Ed7ycMTYMaF0hK29TFrwNcWLvM4CK98bzissVAZKOFEB-_HG2NXwtF1If8S4Ky6PtDdMRlY_GW0KJBtdLFNGuW5udfPruwMeQ90E685lmopeTQvt80yQR6kVgZtZ0ViE-eq8EneSOTCCThGtahczIrg9_jRYNMsLak_hE_J80UemYavzOWWD5L8kAVyD5bPgdBMbO6LlOt15h9CGKJXpKsWsBCjuFh-2N9LHp" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent flex items-end p-8">
+                        <h3
+                            class="text-white text-4xl font-black uppercase italic leading-none group-hover:text-primary transition-colors">
+                            Media<br />Skills</h3>
+                    </div>
+                </div>
+                <div class="group relative aspect-square overflow-hidden bg-electric-purple border-4 border-primary">
+                    <img class="w-full h-full object-cover mix-blend-overlay opacity-80 group-hover:scale-110 transition-transform duration-700"
+                        alt="High contrast photo of a DJ at a mixer"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuN9p51Vy7wQK4hutAywaYQOU8S1bqyou7uIhgsJgi2FSKCpIvsw2ngdT7Q86Cqf6OLtIq8Hmmj1_5dwuGvP095Jcj_kapdgArGSnyULYviyTf4IQzs19z4JIOKvm1U0ghAdjAKc-XKJeVOkcLXqbmxDIPd7opP1pU2xUNofDEJ7ijZoIKxVHyBGopfd1BGHtmEiCWCHP5LV4WnRK1onM4nlRaG9g2NBguTIJ4a0_G_S3t8bxe7n8-pvAy7MekhU3e4VfN89germRg" />
+                    <div class="absolute inset-0 flex items-end p-8">
+                        <h3 class="text-black text-4xl font-black uppercase italic leading-none">Radio<br />Training
+                        </h3>
+                    </div>
+                </div>
+                <div class="group relative aspect-square overflow-hidden bg-slate-900 border-4 border-primary">
+                    <img class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700"
+                        alt="A filmmaker looking through a professional camera lens"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBydZcdbg5pTbiSk-qPOCYtFJwxvyhi8xJxoWZkqCCB50Nfo9N7v7TbFc_RCz6osIQkDN3eH1hSuFjWpKX0ImzTY0gIiczBXUl6JmLLCGaZnN3Sgr1CI9AWCSGpcAt7i_i2GOwRSCLUXcnp1OdYrRrfmXi_DDyl1kJXDX1DBNIPZ9GO2F2ABuGMcWYv_Zlige1EdiJIrFDUItOcZWzCO0q_htFItrYD8tBZaLMDM_YFCqoS-JycwBgPp-rU0DCgxgQvXx8C0LSBqsK8" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent flex items-end p-8">
+                        <h3
+                            class="text-white text-4xl font-black uppercase italic leading-none group-hover:text-acid-cyan transition-colors">
+                            Creative<br />Content</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-background-dark py-20 px-6 md:px-12 overflow-hidden relative">
+            <h2
+                class="text-primary text-4xl font-black uppercase mb-12 tracking-tighter text-right border-r-8 border-acid-cyan pr-4">
+                Pathways</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div
+                    class="flex-1 bg-accent-pink p-8 border-4 border-white min-h-[450px] flex flex-col justify-between transform hover:scale-[1.02] transition-transform">
+                    <span class="text-black font-black text-4xl tracking-tighter">01</span>
+                    <div>
+                        <h4 class="text-black text-6xl font-black uppercase leading-[0.85] mb-6">Level 1:<br />Discover
+                        </h4>
+                        <p class="text-black font-bold uppercase text-sm border-t-2 border-black pt-4">Foundations of
+                            sound and broadcast.</p>
+                    </div>
+                </div>
+                <div
+                    class="flex-1 bg-accent-gold p-8 border-4 border-white min-h-[450px] flex flex-col justify-between transform hover:scale-[1.02] transition-transform">
+                    <span class="text-black font-black text-4xl tracking-tighter">02</span>
+                    <div>
+                        <h4 class="text-black text-6xl font-black uppercase leading-[0.85] mb-6">Level 2:<br />Develop
+                        </h4>
+                        <p class="text-black font-bold uppercase text-sm border-t-2 border-black pt-4">Advanced
+                            production and content design.</p>
+                    </div>
+                </div>
+                <div
+                    class="flex-1 bg-acid-cyan p-8 border-4 border-white min-h-[450px] flex flex-col justify-between transform hover:scale-[1.02] transition-transform">
+                    <span class="text-black font-black text-4xl tracking-tighter">03</span>
+                    <div>
+                        <h4 class="text-black text-6xl font-black uppercase leading-[0.85] mb-6">Level 3:<br />Deploy
+                        </h4>
+                        <p class="text-black font-bold uppercase text-sm border-t-2 border-black pt-4">Launch your
+                            career and go live.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative min-h-[700px] flex items-center justify-center py-20 overflow-hidden">
+            <div class="absolute inset-0">
+                <img class="w-full h-full object-cover" alt="Blurred high-energy crowd at a music festival"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN4A1cYp_0r-4MOUVJ-1Fwo0bfzKB01q1ZEZxtZLXc2wg9GJMjRHJOykZeX1tkNZxGTr16cjcX1SzzpP8cGenp7A0SEElMgGSsCEX946F1Hzp5uDUtCrHamqq5xe5aI-r9192FdvKEMzWVtygmpIniSahjI233qFQ_-tfB-6PIgZP4WSxCh8IHJ-aYdtjnsej5uVWUzTMSM3AVvk-wx5a7EatBCfU8xdXbv8Zwf1TcWA2AhITrOSSi60vCfNlkuNGBiPr5ASFf5nVY" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-tr from-background-dark via-electric-purple/40 to-acid-cyan/30 mix-blend-multiply opacity-90">
+                </div>
+                <div class="absolute inset-0 bg-black/60"></div>
+            </div>
+            <div class="relative z-10 w-full max-w-4xl px-6">
+                <div
+                    class="bg-white/5 backdrop-blur-md border-2 border-white/20 p-16 text-center transform hover:rotate-0 transition-transform duration-700 shadow-[0_0_50px_rgba(191,0,255,0.2)]">
+                    <h2 class="text-white text-5xl md:text-8xl font-black uppercase mb-6 tracking-tighter italic">
+                        Community Slots</h2>
+                    <p class="text-acid-cyan text-xl font-bold uppercase mb-12 tracking-widest">Take the mic. Represent
+                        your scene.</p>
+                    <button
+                        class="bg-white text-black text-2xl font-black uppercase px-16 py-6 border-4 border-transparent hover:bg-primary transition-all hover:scale-105">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Restored to Midnight Vibes / Darker variant) -->
+    <footer class="bg-primary/10 border-t border-primary/20 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 text-primary mb-8">
+                        <span class="material-symbols-outlined text-4xl font-bold">radio</span>
+                        <h2 class="text-3xl font-black italic tracking-tighter">ONE TREES RADIO</h2>
+                    </div>
+                    <p class="text-slate-400 max-w-sm mb-8 font-medium">The digital pulse of the city. We are more than
+                        a radio station; we are a community hub for the next generation of creative pioneers.</p>
+                    <div class="flex gap-4">
+                        <a class="size-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-white">share</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-white">public</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-white">mail</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-black uppercase tracking-widest mb-6">EXPLORE</h4>
+                    <ul class="space-y-4 font-bold text-sm text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="index.html">LIVE STREAM</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">SCHEDULE</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">ARCHIVES</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">NEWS</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black uppercase tracking-widest mb-6">COMMUNITY</h4>
+                    <ul class="space-y-4 font-bold text-sm text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="community.html">JOIN US</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="workshops.html">WORKSHOPS</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="creators.html">CREATORS</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">DONATE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-primary/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <p class="text-xs font-bold text-slate-500">© 2024 ONE TREES RADIO. POWERED BY THE YOUTH.</p>
+                <div class="flex gap-8 text-xs font-bold text-slate-500">
+                    <a class="hover:text-white" href="#">PRIVACY POLICY</a>
+                    <a class="hover:text-white" href="#">TERMS OF SERVICE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/layout.js"></script>
+</body>
+
+</html>
