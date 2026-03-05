@@ -72,7 +72,7 @@
     <!-- Top Navigation -->
     <header
         class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/20">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
             <div class="flex items-center gap-10">
                 <a href="index.html" class="flex items-center gap-3 text-primary">
                     <img src="logo.png" alt="One Tees Radio Logo" class="h-12 w-auto object-contain">
@@ -98,20 +98,22 @@
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 py-8">
+    <main class="max-w-7xl mx-auto px-6 pt-2 pb-8">
         <!-- Hero Section -->
-        <section class="grid lg:grid-cols-12 gap-6 mb-12">
+        <section
+            class="grid lg:grid-cols-12 gap-0 mb-0 lg:h-[520px] overflow-hidden rounded-xl border-2 border-primary/30">
             <!-- Left: Player -->
             <div
-                class="lg:col-span-5 bg-primary/20 rounded-xl p-8 flex flex-col justify-between border-2 border-primary/30 relative overflow-hidden">
+                class="lg:col-span-5 bg-primary/20 p-8 pt-16 flex flex-col justify-center gap-8 relative overflow-hidden border-r-2 border-primary/30">
                 <div class="relative z-10">
                     <div class="flex items-center gap-2 mb-6">
                         <span class="flex h-3 w-3 rounded-full bg-red-500 animate-pulse"></span>
                         <span class="text-xs font-black uppercase tracking-widest text-red-500">Listen Live Now</span>
                     </div>
-                    <div class="aspect-square w-full rounded-lg mb-6 overflow-hidden shadow-2xl">
-                        <img class="w-full h-full object-cover" alt="Close up of a young DJ with headphones performing"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMINlFZ1dak1LRlAJA0D7phwLOWzZGoG-HvJl8gX0BjjVPf4P05KzBwijAq9CF48qlyHRECNiLf9XQLTd3emkNFe05iiPOixsnPwFFsH9XWSB9rvIrycikJ62WeYBJbIz8CcSxHzmjq_1N1fiZ_d4LjAtC3PjS8-wF7kOchlQqODV4iF-YiLI6Hc_AL92OWr7lOf0X8qUfwHgPMTTnTwB67TclssFkTwuDbGhhAtI5sxwLdlQSyYe6XNb5FfSf1xWeAVFu3lS_klrG" />
+                    <div class="aspect-video w-full h-64 rounded-lg mb-6 overflow-hidden shadow-2xl">
+                        <img class="w-full h-full object-cover"
+                            alt="Close up of a young black DJ with headphones and vibrant neon lighting"
+                            src="hero-image.jpg" />
                     </div>
                     <h2 class="text-3xl font-black mb-2">MIDNIGHT VIBES</h2>
                     <p class="text-primary font-bold text-lg mb-8 uppercase tracking-tight">Hosted by DJ X-TREME</p>
@@ -127,19 +129,13 @@
                         <div class="w-2 bg-primary h-7"></div>
                     </div>
                 </div>
-                <button
-                    class="relative z-10 w-full bg-white dark:bg-slate-100 text-background-dark py-4 rounded-lg font-black text-xl flex items-center justify-center gap-3 hover:bg-accent-lime transition-colors">
-                    <span class="material-symbols-outlined fill-current">play_arrow</span>
-                    START LISTENING
-                </button>
-                <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-primary/30 blur-[100px] rounded-full"></div>
             </div>
             <!-- Right: Studio Video -->
-            <div class="lg:col-span-7 rounded-xl overflow-hidden relative group">
+            <div class="lg:col-span-7 overflow-hidden relative group">
                 <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent z-10"></div>
                 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    alt="High energy radio studio with multiple monitors and young creators"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3CPeQyUJgFqWgsUtNqtCQHyD9FCt1szEP9v4zRgmBkjmDog8AQ2JZUEKD8ec5XwwrDy5FOQOEs2ouAbR8mwrkuVhDVD5iPsWt1yDjUhU8VfGGa7FyWASPm7xAsLIqebeepMqCLnbSFYipI0aQ768o8nxWo2XEoxBZV3xBRG_oD4YCzyaq87C3IL2soC0dAWM9FbATdh9Vbsvb3yTE2xbsGU2go_qFeHvs9qsVIeZzhsawxyvKdFs2zXU3hIbfgtM2ohKo2uTvJvDa" />
+                    alt="Energetic radio studio with black creators and modern equipment"
+                    src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=1200" />
                 <div class="absolute bottom-8 left-8 z-20 max-w-lg">
                     <h1 class="text-5xl font-black mb-4 leading-[0.9] tracking-tighter">THE FUTURE OF <span
                             class="text-accent-lime">CULTURE</span> IS HERE.</h1>
@@ -156,7 +152,7 @@
             </div>
         </section>
         <!-- Marquee -->
-        <section class="overflow-hidden bg-primary py-4 -mx-6 mb-16 rotate-[-1deg]">
+        <section class="overflow-hidden bg-primary py-4 -mx-6 mb-16 mt-12">
             <div class="animate-marquee whitespace-nowrap">
                 <span class="text-4xl font-black text-white mx-8 uppercase">AMAPIANO • AFROBEATS • HIP-HOP • LIVE NOW •
                     JOIN THE HUB • </span>
@@ -177,8 +173,8 @@
                 <!-- Tile 1 -->
                 <div class="relative aspect-[3/4] rounded-xl overflow-hidden group">
                     <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        alt="Singer performing in a professional microphone setup"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxJV0pSYMK4QR-4DrkvGNkHE95YUufYIamqfAjH1Oah_Nrt_qOCOCpuNC21sSrTRO2S95KQoJGCZpIeRybybYLFdk9sA5G1QgtsOM4xiY7avlnzROq2OAiie9l1xXa2BBnTBcJTcTjvHv8vleVODJ0eHOwIvf-2hXfyr-MoUkCyUJffUMeRFj-daqKcMUMCXkWzXc9w-_zhRebkhNMl0-fcuiKZfLaeJnLQ69c_KH2b7PD6u2kloRDr64wDKySMuTfDnO6fEFTVdKH" />
+                        alt="Black female singer performing with a professional microphone"
+                        src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=600" />
                     <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent opacity-80">
                     </div>
                     <div class="absolute top-4 left-4 bg-red-600 text-white text-[10px] font-black px-2 py-1 rounded">
@@ -197,8 +193,8 @@
                 <!-- Tile 2 -->
                 <div class="relative aspect-[3/4] rounded-xl overflow-hidden group">
                     <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        alt="Two people discussing on a podcast in a studio"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAudXEhfWSuREeBAzZrEGDwfQ8-MY9js4A4GI7Y3v7JwYoXe-JjeUYImwa1mN4UvIQ1UTCzeqKCnv8FHL9Jabe0WLx2kF6Ksjll_cjJM1u9UDZ108f9CuLNYlh01icBTMERdwIvsh4nWpqxh7WlF2dbfFpSGGMirsZw_2XwOGdDgdVN7jdpmXtjfGvf2afIkA7VUWfruvz3AyfHdnUeBtFYTD1_W8JVApMbQ9wJySf172G5d1bhPG49pE9nGkFdngdfuHIehI9n5tLR" />
+                        alt="Black podcasters discussing in a vibrant studio"
+                        src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=600" />
                     <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent opacity-80">
                     </div>
                     <div class="absolute bottom-6 left-6 right-6">
@@ -233,8 +229,8 @@
                 <!-- Tile 4 -->
                 <div class="relative aspect-[3/4] rounded-xl overflow-hidden group">
                     <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        alt="Modern radio equipment and mixing board"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvuKAfde0j4QsZnRC2nSvNgNXeRg06gqlheU87WFTY2C4nChlNedxAM3BnPB1KmqafG-KcJfAqzXoxD2gZEYp5Sbxhb5e2UoajPdVkobiHTHe8njPQK7iVHDvK8Km0m7Fq2v2q0vW5WkeI-Cw8YvlPgcDeCm4m_YYz0QYCONt9QkoNG_WBlFYwLNpWNl_MsmN3Tx7ZCbo7IFUxSllNai9yKPwwHfnIoNFP8XX5G8Fvwag4Fh7BOhHYWrakSdpuJMsuGDfc1Hvcace" />
+                        alt="High-tech VR headset with green digital matrix code projections"
+                        src="techno-takeover.png" />
                     <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent opacity-80">
                     </div>
                     <div class="absolute bottom-6 left-6 right-6">
@@ -357,8 +353,8 @@
                     <div
                         class="flex flex-col items-center text-center p-6 bg-primary/10 rounded-xl border-2 border-primary/20">
                         <img class="size-20 rounded-full border-4 border-primary mb-4 object-cover"
-                            alt="Portrait of a young creator"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzfQp83OWZlFan4FGmj2tnpA1iA8cA58opgE3rJxdtsslv9vML4M2OLQ6XMmQ3JlL6u1s_X-0uz8lB4gD-Z1-umPyOLnz4bKR0WEA2tWAgn6oNXVQvCZWGPHWvuZ6o-DjVvEdGA0BG_1Yf7jwtBNh2WPZsltI13OLz-0MtSWjfRqvB3gEUsWGFyqoYgk69D58tutf8Kx5fa8jdh8HaTBP36pu5GTjxAaRavI2D_OZBWE1nTmbwe_m5nMw0Br04tProJu4fcrvj6BUl" />
+                            alt="Portrait of black female creator Sara Vibe"
+                            src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=200" />
                         <h5 class="font-black text-sm uppercase">SARA VIBE</h5>
                         <p class="text-[10px] font-bold text-primary mb-3">RADIO HOST</p>
                         <button
@@ -367,8 +363,8 @@
                     <div
                         class="flex flex-col items-center text-center p-6 bg-accent-lime/10 rounded-xl border-2 border-accent-lime/20">
                         <img class="size-20 rounded-full border-4 border-accent-lime mb-4 object-cover"
-                            alt="Portrait of a male DJ"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMcxxYXiRLtgKzZALgc7qOpJ-PpCmoPo5nzv8WhfBmPPRYgXe0L0MioaIhAntUYN18aBALWl_R_t9PXVafm37jVI7YAJ34KMoeyHE2FehzIbq0ihTyJLO_hkY-lBBgekILw2iXGLII8OhqgFs6DjKaJpBhl5JPCMiYvMG_CvSdSJwONY-pzqhv6A2EEjdXopjy0UtfkrZoGRB8ehpoVtElbkU79iAqlbny8o41DAtKF2qwPJjXLxYmfv3wTiV-DIMpWt-TsT2SNLck" />
+                            alt="Portrait of black male DJ Noise"
+                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" />
                         <h5 class="font-black text-sm uppercase">DJ NOISE</h5>
                         <p class="text-[10px] font-bold text-accent-lime mb-3">CURATOR</p>
                         <button
@@ -377,8 +373,8 @@
                     <div
                         class="flex flex-col items-center text-center p-6 bg-accent-pink/10 rounded-xl border-2 border-accent-pink/20">
                         <img class="size-20 rounded-full border-4 border-accent-pink mb-4 object-cover"
-                            alt="Portrait of a young male creator"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-NoRz9zlmLBsDOf42dsOLgpM2G5yiptyPhT5Sj_1Mlz06SdBommXHt6SztOJZdG4NMDH9OjFdrQQbzO7lH1bGoBUvJwtNeFHyiRy0-6Ptr7tO0l45ZOgbZhzpPSij-c0ldR_rDpMhSLSLAvp9PCq0h_7_JPWYohzDrU_kjXfaAv4bvuSkXa9-N_0QTV-adcsLt7y0dn9ajPRLbSEJLf-E6Em-PDN4iU3XKU59Z9UQAlPWe_RM9AlxmcX4QurOXpRPK3dDKggj-XMe" />
+                            alt="Portrait of black male producer Lex Beats"
+                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200" />
                         <h5 class="font-black text-sm uppercase">LEX BEATS</h5>
                         <p class="text-[10px] font-bold text-accent-pink mb-3">PRODUCER</p>
                         <button
@@ -387,8 +383,8 @@
                     <div
                         class="flex flex-col items-center text-center p-6 bg-primary/10 rounded-xl border-2 border-primary/20">
                         <img class="size-20 rounded-full border-4 border-primary mb-4 object-cover"
-                            alt="Portrait of a female podcaster"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkebxAvtwcKbTiTFB5mp0hmVyOknuNPs8wTJrtNbBzqynveaZYStOGFzCFZMvHTTydMRNFusPeYe8ZUwVXVjsM3MDxxOyLlpNQ2kwC4Fx6vd5QQNgJefbqY1L2kwniyVAzQc2uKvKudeDVoGs6fTem2z31iLv1Cs7gXEhB3n-iPueW0aENLNfjrLEc0pvr78lG3gTloFvJh2ZaWRDyIV8Gcj3E_t6DZ2unag4piAzs7n-f7NZPG8ykkz6qiK7J1ZJFbj21QrcCWsf" />
+                            alt="Portrait of black female podcaster Mia Talks"
+                            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" />
                         <h5 class="font-black text-sm uppercase">MIA TALKS</h5>
                         <p class="text-[10px] font-bold text-primary mb-3">PODCASTER</p>
                         <button
