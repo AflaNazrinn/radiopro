@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
         rel="stylesheet" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
         rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
@@ -63,6 +63,17 @@
             border: 3px solid currentColor;
             box-shadow: 4px 4px 0px 0px currentColor;
         }
+
+        .material-symbols-outlined {
+            font-display: block;
+            width: 1em;
+            height: 1em;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            vertical-align: middle;
+        }
     </style>
 </head>
 
@@ -79,8 +90,7 @@
                 </a>
                 <nav class="hidden lg:flex items-center gap-8">
                     <a class="text-sm font-bold hover:text-primary transition-colors" href="index.html">HOME</a>
-                    <a class="text-sm font-bold hover:text-primary transition-colors"
-                        href="workshops.html">WORKSHOPS</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors" href="workshops.html">WORKSHOPS</a>
                     <a class="text-sm font-bold hover:text-primary transition-colors" href="creators.html">CREATORS</a>
                     <a class="text-sm font-bold hover:text-primary transition-colors"
                         href="community.html">COMMUNITY</a>
@@ -98,59 +108,166 @@
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 pt-2 pb-8">
-        <!-- Hero Section -->
-        <section
-            class="grid lg:grid-cols-12 gap-0 mb-0 lg:h-[520px] overflow-hidden rounded-xl border-2 border-primary/30">
-            <!-- Left: Player -->
-            <div
-                class="lg:col-span-5 bg-primary/20 p-8 pt-16 flex flex-col justify-center gap-8 relative overflow-hidden border-r-2 border-primary/30">
-                <div class="relative z-10">
-                    <div class="flex items-center gap-2 mb-6">
-                        <span class="flex h-3 w-3 rounded-full bg-red-500 animate-pulse"></span>
-                        <span class="text-xs font-black uppercase tracking-widest text-red-500">Listen Live Now</span>
-                    </div>
-                    <div class="aspect-video w-full h-64 rounded-lg mb-6 overflow-hidden shadow-2xl">
-                        <img class="w-full h-full object-cover"
-                            alt="Close up of a young black DJ with headphones and vibrant neon lighting"
-                            src="hero-image.jpg" />
-                    </div>
-                    <h2 class="text-3xl font-black mb-2">MIDNIGHT VIBES</h2>
-                    <p class="text-primary font-bold text-lg mb-8 uppercase tracking-tight">Hosted by DJ X-TREME</p>
-                    <!-- Visualizer -->
-                    <div class="flex items-end gap-1 h-12 mb-8">
-                        <div class="w-2 bg-primary h-4"></div>
-                        <div class="w-2 bg-primary h-8"></div>
-                        <div class="w-2 bg-primary h-12"></div>
-                        <div class="w-2 bg-primary h-6"></div>
-                        <div class="w-2 bg-primary h-10"></div>
-                        <div class="w-2 bg-primary h-5"></div>
-                        <div class="w-2 bg-primary h-11"></div>
-                        <div class="w-2 bg-primary h-7"></div>
+    </header>
+
+    <!-- Full-width Hero Section -->
+    <section class="relative min-h-[85vh] flex flex-col items-center justify-center overflow-hidden bg-background-dark text-white px-6 py-20">
+        <!-- Background Accents -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute -top-1/4 -left-1/4 size-[1000px] bg-primary/20 blur-[150px] rounded-full animate-pulse"></div>
+            <div class="absolute -bottom-1/4 -right-1/4 size-[1000px] bg-accent-lime/10 blur-[150px] rounded-full animate-pulse" style="animation-delay: 2s"></div>
+            <!-- Waveform Visualization Placeholder -->
+            <div class="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-background-dark to-transparent opacity-50 flex items-end justify-center gap-1 px-4">
+                <div class="w-1 bg-primary/40 h-12 rounded-t-full animate-bounce" style="animation-duration: 0.8s"></div>
+                <div class="w-1 bg-primary/40 h-24 rounded-t-full animate-bounce" style="animation-duration: 1.2s"></div>
+                <div class="w-1 bg-primary/40 h-16 rounded-t-full animate-bounce" style="animation-duration: 0.5s"></div>
+                <div class="w-1 bg-primary/40 h-32 rounded-t-full animate-bounce" style="animation-duration: 1.5s"></div>
+                <div class="w-1 bg-primary/40 h-20 rounded-t-full animate-bounce" style="animation-duration: 0.9s"></div>
+                <div class="w-1 bg-primary/40 h-40 rounded-t-full animate-bounce" style="animation-duration: 1.1s"></div>
+                <div class="w-1 bg-primary/40 h-28 rounded-t-full animate-bounce" style="animation-duration: 0.7s"></div>
+                <div class="w-1 bg-primary/40 h-48 rounded-t-full animate-bounce" style="animation-duration: 1.3s"></div>
+            </div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl w-full text-center flex flex-col items-center gap-12">
+            <!-- Branding Block -->
+            <div class="space-y-4">
+                <h1 class="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none">
+                    ONE TEES <span class="text-primary italic">RADIO</span>
+                </h1>
+                <p class="text-xl md:text-3xl font-bold text-slate-400 tracking-tight">
+                    The Sound of Youth Culture in the North East
+                </p>
+            </div>
+
+            <!-- Primary CTA Player -->
+            <div class="flex flex-col items-center gap-8 w-full">
+                <button id="main-play-btn" class="group relative size-32 md:size-48 bg-primary rounded-full flex items-center justify-center transition-all hover:scale-105 active:scale-95 shadow-[0_0_50px_-10px_rgba(140,43,238,0.6)]">
+                    <span id="play-icon" class="material-symbols-outlined text-6xl md:text-8xl text-white group-hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">play_arrow</span>
+                    <span id="pause-icon" class="hidden material-symbols-outlined text-6xl md:text-8xl text-white">pause</span>
+                    <!-- Border Pulse -->
+                    <div class="absolute -inset-4 border-2 border-primary/30 rounded-full animate-ping pointer-events-none"></div>
+                </button>
+                <div class="flex flex-col items-center gap-2">
+                    <span class="text-2xl md:text-4xl font-black tracking-widest uppercase">Listen Live</span>
+                    <div id="stream-status" class="flex items-center gap-2 text-red-500 font-bold uppercase text-xs tracking-widest opacity-0 transition-opacity">
+                        <span class="size-2 rounded-full bg-red-500 animate-pulse"></span>
+                        On Air
                     </div>
                 </div>
             </div>
-            <!-- Right: Studio Video -->
-            <div class="lg:col-span-7 overflow-hidden relative group">
-                <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent z-10"></div>
-                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    alt="Energetic radio studio with black creators and modern equipment"
-                    src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=1200" />
-                <div class="absolute bottom-8 left-8 z-20 max-w-lg">
-                    <h1 class="text-5xl font-black mb-4 leading-[0.9] tracking-tighter">THE FUTURE OF <span
-                            class="text-accent-lime">CULTURE</span> IS HERE.</h1>
-                    <p class="text-lg text-slate-300 font-medium">Empowering the next generation of storytellers,
-                        beatmakers, and change-drivers in the heart of the city.</p>
-                </div>
-                <div class="absolute top-8 right-8 z-20">
-                    <div
-                        class="bg-black/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 flex items-center gap-2">
-                        <span class="material-symbols-outlined text-accent-pink">videocam</span>
-                        <span class="text-xs font-bold text-white uppercase">Studio Cam 01</span>
+
+            <!-- Now Playing Panel -->
+            <div id="now-playing-panel" class="glass-card rounded-3xl p-6 md:p-10 border border-white/10 w-full max-w-4xl backdrop-blur-2xl">
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 text-left w-full">
+                    <!-- Artwork -->
+                    <div class="relative size-48 md:size-64 rounded-2xl overflow-hidden shadow-2xl group shrink-0">
+                        <img id="current-artwork" src="north-east-drive.png" alt="Album Art" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    
+                    <!-- Info -->
+                    <div class="flex-1 space-y-6 w-full text-center md:text-left">
+                        <div class="space-y-1">
+                            <span class="text-xs font-black uppercase tracking-[0.3em] text-primary">Now Playing</span>
+                            <h2 id="current-track" class="text-3xl md:text-5xl font-black leading-none truncate">Loading...</h2>
+                            <p id="current-creator" class="text-xl md:text-2xl font-bold text-slate-400">Please wait</p>
+                        </div>
+                        
+                        <div class="flex flex-wrap justify-center md:justify-start gap-6 border-t border-white/10 pt-6">
+                            <div class="space-y-1">
+                                <span class="text-[10px] font-black uppercase tracking-widest text-slate-500">Show</span>
+                                <p id="current-show" class="font-bold text-sm">NORTH EAST DRIVE</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="text-[10px] font-black uppercase tracking-widest text-slate-500">Next Show</span>
+                                <p id="next-show-info" class="font-bold text-sm">LIVE FROM TEESSIDE @ 18:00</p>
+                            </div>
+                            <div class="space-y-1 md:ml-auto">
+                                <div class="bg-primary/20 px-4 py-2 rounded-full flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-sm text-primary">groups</span>
+                                    <span id="listener-count" class="text-xs font-black text-primary uppercase tracking-wider">0 Listening</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Mini Player (Hidden by default) -->
+    <div id="sticky-player" class="fixed bottom-0 left-0 right-0 z-[60] transform translate-y-full transition-transform duration-500 ease-in-out">
+        <div class="bg-background-dark/95 backdrop-blur-xl border-t border-primary/20 p-4">
+            <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+                <div class="flex items-center gap-4 flex-1 min-w-0">
+                    <img id="sticky-artwork" src="north-east-drive.png" alt="Art" class="size-12 rounded object-cover shadow-lg">
+                    <div class="min-w-0">
+                        <p id="sticky-track" class="font-black text-sm truncate uppercase tracking-tight">Loading...</p>
+                        <p id="sticky-creator" class="text-[10px] font-bold text-slate-400 truncate uppercase">Please wait</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6">
+                    <button id="sticky-play-btn" class="size-12 bg-primary rounded-full flex items-center justify-center text-white active:scale-90 transition-transform shadow-lg shadow-primary/20">
+                        <span id="sticky-play-icon" class="material-symbols-outlined text-3xl">play_arrow</span>
+                        <span id="sticky-pause-icon" class="hidden material-symbols-outlined text-3xl">pause</span>
+                    </button>
+                    <!-- Close button to dismiss? Maybe not, usually persistence is better -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-6 pt-16 pb-8">
+        <!-- Meet The Creators Section -->
+        <section id="meet-the-creators" class="mb-24">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div class="space-y-2">
+                    <h2 class="text-6xl font-black tracking-tighter uppercase italic">MEET THE <span class="text-primary not-italic">CREATORS</span></h2>
+                    <p class="text-slate-400 font-bold text-xl tracking-tight">The voices shaping youth culture in the North East</p>
+                </div>
+                <a href="creators.html" class="group flex items-center gap-3 text-primary font-black uppercase tracking-widest text-sm hover:translate-x-2 transition-transform">
+                    View All Creators
+                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </a>
+            </div>
+            
+            <!-- Dynamic Creators Grid -->
+            <div id="creators-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Injected via creators.js -->
+                <div class="animate-pulse bg-white/5 h-[500px] rounded-3xl"></div>
+                <div class="animate-pulse bg-white/5 h-[500px] rounded-3xl"></div>
+                <div class="animate-pulse bg-white/5 h-[500px] rounded-3xl"></div>
+                <div class="animate-pulse bg-white/5 h-[500px] rounded-3xl"></div>
             </div>
         </section>
+
+        <!-- What's On Section -->
+        <section id="whats-on" class="mb-24 py-16 px-8 rounded-[3rem] bg-white/5 border border-white/10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div class="space-y-2">
+                    <h2 class="text-6xl font-black tracking-tighter uppercase italic text-white">WHAT'S <span class="text-accent-lime not-italic underline decoration-4 underline-offset-8">ON</span></h2>
+                    <p class="text-slate-400 font-bold text-xl tracking-tight max-w-xl">Events shaping youth culture and community spirit in the North East</p>
+                </div>
+                <div class="flex gap-4">
+                    <button class="bg-white/10 hover:bg-white/20 text-white size-14 rounded-full flex items-center justify-center transition-all">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button class="bg-primary hover:bg-primary/90 text-white size-14 rounded-full flex items-center justify-center transition-all">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Dynamic Events Grid -->
+            <div id="events-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Injected via events.js -->
+                <div class="animate-pulse bg-white/10 h-[450px] rounded-3xl"></div>
+                <div class="animate-pulse bg-white/10 h-[450px] rounded-3xl"></div>
+                <div class="animate-pulse bg-white/10 h-[450px] rounded-3xl"></div>
+            </div>
+        </section>
+
         <!-- Marquee -->
         <section class="overflow-hidden bg-primary py-4 -mx-6 mb-16 mt-12">
             <div class="animate-marquee whitespace-nowrap">
@@ -246,55 +363,8 @@
                 </div>
             </div>
         </section>
-        <!-- Skills & Workshops -->
-        <section class="mb-20">
-            <div class="text-center mb-12">
-                <h2 class="text-5xl font-black tracking-tighter mb-4 italic">SKILLS &amp; WORKSHOPS</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto font-medium">Elevate your game with industry pros. Hands-on
-                    training for the next wave of creative leaders.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Workshop Card 1 -->
-                <div
-                    class="glass-card rounded-xl p-8 flex flex-col justify-between border-b-4 border-primary group hover:bg-primary/20 transition-all">
-                    <div>
-                        <span class="material-symbols-outlined text-5xl text-primary mb-6">podcasts</span>
-                        <h3 class="text-2xl font-black mb-4">Media Training</h3>
-                        <p class="text-slate-400 mb-8 font-medium">Master the mic. From interview techniques to
-                            broadcast ethics and scriptwriting.</p>
-                    </div>
-                    <button
-                        class="w-full py-4 border-2 border-primary text-primary font-black hover:bg-primary hover:text-white transition-colors">BOOK
-                        NOW</button>
-                </div>
-                <!-- Workshop Card 2 -->
-                <div
-                    class="glass-card rounded-xl p-8 flex flex-col justify-between border-b-4 border-accent-lime group hover:bg-accent-lime/10 transition-all">
-                    <div>
-                        <span class="material-symbols-outlined text-5xl text-accent-lime mb-6">graphic_eq</span>
-                        <h3 class="text-2xl font-black mb-4">DJ Masterclass</h3>
-                        <p class="text-slate-400 mb-8 font-medium">Beatmatching, phrasing, and set building. Learn on
-                            industry-standard Pioneer gear.</p>
-                    </div>
-                    <button
-                        class="w-full py-4 border-2 border-accent-lime text-accent-lime font-black hover:bg-accent-lime hover:text-background-dark transition-colors">BOOK
-                        NOW</button>
-                </div>
-                <!-- Workshop Card 3 -->
-                <div
-                    class="glass-card rounded-xl p-8 flex flex-col justify-between border-b-4 border-accent-pink group hover:bg-accent-pink/10 transition-all">
-                    <div>
-                        <span class="material-symbols-outlined text-5xl text-accent-pink mb-6">movie_edit</span>
-                        <h3 class="text-2xl font-black mb-4">Content Production</h3>
-                        <p class="text-slate-400 mb-8 font-medium">Vertical video, editing for TikTok/Reels, and digital
-                            storytelling fundamentals.</p>
-                    </div>
-                    <button
-                        class="w-full py-4 border-2 border-accent-pink text-accent-pink font-black hover:bg-accent-pink hover:text-white transition-colors">BOOK
-                        NOW</button>
-                </div>
-            </div>
         </section>
+        <!-- Community Feed -->
         <!-- Community Feed -->
         <section class="mb-20 grid lg:grid-cols-12 gap-12">
             <div class="lg:col-span-8">
@@ -347,49 +417,134 @@
                     </div>
                 </div>
             </div>
-            <div class="lg:col-span-4">
-                <h2 class="text-4xl font-black mb-8 italic">TOP CREATORS</h2>
-                <div class="grid grid-cols-2 gap-4">
-                    <div
-                        class="flex flex-col items-center text-center p-6 bg-primary/10 rounded-xl border-2 border-primary/20">
-                        <img class="size-20 rounded-full border-4 border-primary mb-4 object-cover"
-                            alt="Portrait of black female creator Sara Vibe"
-                            src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=200" />
-                        <h5 class="font-black text-sm uppercase">SARA VIBE</h5>
-                        <p class="text-[10px] font-bold text-primary mb-3">RADIO HOST</p>
-                        <button
-                            class="text-[10px] font-black bg-primary text-white px-4 py-1 rounded-full">FOLLOW</button>
+            </div>
+        </section>
+
+        <!-- Social Feeds Section -->
+        <section id="social-feeds" class="mb-24 px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 text-white">
+                <div class="space-y-2">
+                    <h2 class="text-6xl font-black tracking-tighter uppercase italic">LATEST FROM <span class="text-primary not-italic">ONE TEES</span></h2>
+                    <p class="text-slate-400 font-bold text-xl tracking-tight">Real-time culture, straight from the streets</p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="size-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors"><img src="https://www.google.com/s2/favicons?domain=instagram.com&sz=64" class="size-5"></a>
+                    <a href="#" class="size-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-black transition-colors"><img src="https://www.google.com/s2/favicons?domain=tiktok.com&sz=64" class="size-5"></a>
+                </div>
+            </div>
+            <div id="social-feed-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Injected via social.js -->
+                <div class="animate-pulse bg-white/5 aspect-square rounded-2xl border border-white/5"></div>
+                <div class="animate-pulse bg-white/5 aspect-square rounded-2xl border border-white/5"></div>
+                <div class="animate-pulse bg-white/5 aspect-square rounded-2xl border border-white/5"></div>
+                <div class="animate-pulse bg-white/5 aspect-square rounded-2xl border border-white/5"></div>
+            </div>
+        </section>
+
+        <!-- Interaction Section -->
+        <section id="interaction" class="mb-24 py-20 px-8 mx-6 rounded-[3rem] bg-primary/5 border border-primary/20 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-20 opacity-10 pointer-events-none">
+                <span class="material-symbols-outlined text-[200px]">forum</span>
+            </div>
+            
+            <div class="relative z-10 text-center mb-16">
+                <h2 class="text-6xl md:text-8xl font-black tracking-tighter uppercase italic text-white leading-none mb-4">GET <span class="text-primary not-italic">INVOLVED</span></h2>
+                <p class="text-slate-400 font-bold text-xl tracking-tight">Be part of the station. Your voice, your vibe.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8 relative z-10">
+                <!-- Shoutout -->
+                <div class="bg-background-dark/80 backdrop-blur-xl p-8 rounded-3xl border border-white/10 flex flex-col h-full shadow-2xl">
+                    <div class="size-14 bg-primary/20 rounded-2xl flex items-center justify-center text-primary mb-6">
+                        <span class="material-symbols-outlined text-3xl">chat_bubble</span>
                     </div>
-                    <div
-                        class="flex flex-col items-center text-center p-6 bg-accent-lime/10 rounded-xl border-2 border-accent-lime/20">
-                        <img class="size-20 rounded-full border-4 border-accent-lime mb-4 object-cover"
-                            alt="Portrait of black male DJ Noise"
-                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" />
-                        <h5 class="font-black text-sm uppercase">DJ NOISE</h5>
-                        <p class="text-[10px] font-bold text-accent-lime mb-3">CURATOR</p>
-                        <button
-                            class="text-[10px] font-black bg-accent-lime text-background-dark px-4 py-1 rounded-full">FOLLOW</button>
+                    <h3 class="text-2xl font-black uppercase mb-2">Send a Shoutout</h3>
+                    <p class="text-slate-400 text-sm mb-6 flex-1">Send a message to the studio live on air!</p>
+                    <form id="shoutout-form" class="space-y-4">
+                        <input type="text" placeholder="Your Name" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" required>
+                        <textarea placeholder="Message" rows="2" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none" required></textarea>
+                        <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-black py-4 rounded-xl transition-all active:scale-95 flex items-center justify-center gap-2">
+                            SUBMIT SHOUTOUT <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Song Request -->
+                <div class="bg-background-dark/80 backdrop-blur-xl p-8 rounded-3xl border border-white/10 flex flex-col h-full shadow-2xl">
+                    <div class="size-14 bg-accent-lime/20 rounded-2xl flex items-center justify-center text-accent-lime mb-6">
+                        <span class="material-symbols-outlined text-3xl">music_note</span>
                     </div>
-                    <div
-                        class="flex flex-col items-center text-center p-6 bg-accent-pink/10 rounded-xl border-2 border-accent-pink/20">
-                        <img class="size-20 rounded-full border-4 border-accent-pink mb-4 object-cover"
-                            alt="Portrait of black male producer Lex Beats"
-                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200" />
-                        <h5 class="font-black text-sm uppercase">LEX BEATS</h5>
-                        <p class="text-[10px] font-bold text-accent-pink mb-3">PRODUCER</p>
-                        <button
-                            class="text-[10px] font-black bg-accent-pink text-white px-4 py-1 rounded-full">FOLLOW</button>
+                    <h3 class="text-2xl font-black uppercase mb-2">Request a Song</h3>
+                    <p class="text-slate-400 text-sm mb-6 flex-1">Tell us what you want to hear next.</p>
+                    <form id="request-form" class="space-y-4">
+                        <input type="text" placeholder="Artist Name" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-accent-lime focus:ring-1 focus:ring-accent-lime outline-none transition-all" required>
+                        <input type="text" placeholder="Song Title" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-accent-lime focus:ring-1 focus:ring-accent-lime outline-none transition-all" required>
+                        <button type="submit" class="w-full bg-accent-lime hover:bg-accent-lime/90 text-black font-black py-4 rounded-xl transition-all active:scale-95 flex items-center justify-center gap-2">
+                            REQUEST TRACK <span class="material-symbols-outlined">add</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Voice Note -->
+                <div class="bg-background-dark/80 backdrop-blur-xl p-8 rounded-3xl border border-white/10 flex flex-col h-full shadow-2xl items-center text-center">
+                    <div class="size-14 bg-red-500/20 rounded-2xl flex items-center justify-center text-red-500 mb-6">
+                        <span class="material-symbols-outlined text-3xl">mic</span>
                     </div>
-                    <div
-                        class="flex flex-col items-center text-center p-6 bg-primary/10 rounded-xl border-2 border-primary/20">
-                        <img class="size-20 rounded-full border-4 border-primary mb-4 object-cover"
-                            alt="Portrait of black female podcaster Mia Talks"
-                            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" />
-                        <h5 class="font-black text-sm uppercase">MIA TALKS</h5>
-                        <p class="text-[10px] font-bold text-primary mb-3">PODCASTER</p>
-                        <button
-                            class="text-[10px] font-black bg-primary text-white px-4 py-1 rounded-full">FOLLOW</button>
+                    <h3 class="text-2xl font-black uppercase mb-2">Voice Note to Studio</h3>
+                    <p class="text-slate-400 text-sm mb-8 flex-1">Record a message and we'll play it back!</p>
+                    <div class="space-y-6 w-full mt-auto">
+                        <button id="record-btn" class="size-24 bg-red-500 hover:bg-red-600 rounded-full flex items-center justify-center text-white transition-all shadow-[0_0_30px_-5px_rgba(239,68,68,0.5)] active:scale-90 mx-auto">
+                            <span class="material-symbols-outlined text-4xl">mic</span>
+                        </button>
+                        <p id="record-status" class="text-xs font-black uppercase tracking-widest text-slate-500">Press to Record</p>
                     </div>
+                </div>
+            </div>
+        <!-- Podcast / Replay Section -->
+        <section id="podcasts" class="mb-24 px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 text-white">
+                <div class="space-y-2">
+                    <h2 class="text-6xl font-black tracking-tighter uppercase italic">MISSED <span class="text-primary not-italic text-outline">IT?</span></h2>
+                    <p class="text-slate-400 font-bold text-xl tracking-tight">Listen Again</p>
+                </div>
+                <div class="flex gap-4">
+                    <button class="bg-white/10 hover:bg-white/20 text-white size-12 rounded-full flex items-center justify-center transition-all">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button class="bg-primary hover:bg-primary/90 text-white size-12 rounded-full flex items-center justify-center transition-all">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="podcasts-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Injected via podcasts.js -->
+                <div class="animate-pulse bg-white/5 aspect-video rounded-3xl"></div>
+                <div class="animate-pulse bg-white/5 aspect-video rounded-3xl"></div>
+                <div class="animate-pulse bg-white/5 aspect-video rounded-3xl"></div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section id="partners" class="mb-24 pt-20 border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <h2 class="text-6xl md:text-8xl font-black tracking-tighter uppercase italic mb-16 text-white leading-none">PARTNERS & <span class="text-primary not-italic">SUPPORTERS</span></h2>
+                
+                <div id="partners-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <!-- Injected via partners.js -->
+                    <div class="animate-pulse bg-white/5 aspect-square rounded-3xl"></div>
+                    <div class="animate-pulse bg-white/5 aspect-square rounded-3xl"></div>
+                    <div class="animate-pulse bg-white/5 aspect-square rounded-3xl"></div>
+                    <div class="animate-pulse bg-white/5 aspect-square rounded-3xl"></div>
+                    <div class="animate-pulse bg-white/5 aspect-square rounded-3xl"></div>
+                    <div class="animate-pulse bg-white/5 aspect-square rounded-3xl"></div>
+                </div>
+
+                <div class="mt-16 flex flex-wrap justify-center gap-8 border-t border-white/5 pt-12">
+                    <span class="text-xs font-black uppercase tracking-widest text-slate-500">Brand Partners</span>
+                    <span class="text-xs font-black uppercase tracking-widest text-slate-500">Education Partners</span>
+                    <span class="text-xs font-black uppercase tracking-widest text-slate-500">Community Partners</span>
+                    <span class="text-xs font-black uppercase tracking-widest text-slate-500">Event Partners</span>
                 </div>
             </div>
         </section>
@@ -449,6 +604,12 @@
     </footer>
 
     <script src="js/layout.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/creators.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/social.js"></script>
+    <script src="js/interaction.js"></script>
+    <script src="js/podcasts.js"></script>
+    <script src="js/partners.js"></script>
 </body>
-
 </html>

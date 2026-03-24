@@ -382,6 +382,23 @@
                 </div>
             </div>
         </section>
+
+        <!-- Artist Spotlight Section -->
+        <section id="artist-spotlight" class="space-y-6">
+            <div class="flex items-end justify-between border-b border-white/10 pb-4">
+                <div class="space-y-1">
+                    <h3 class="text-4xl font-black uppercase tracking-tighter">Artist Spotlight</h3>
+                    <p class="text-[10px] font-bold text-accent uppercase tracking-[0.2em] italic">Discover the next wave of North East talent</p>
+                </div>
+            </div>
+            <div id="artists-grid" class="grid md:grid-cols-3 lg:grid-cols-3 gap-6">
+                <!-- Injected via artists.js -->
+                <div class="animate-pulse bg-card-dark h-[400px] border border-white/5"></div>
+                <div class="animate-pulse bg-card-dark h-[400px] border border-white/5"></div>
+                <div class="animate-pulse bg-card-dark h-[400px] border border-white/5"></div>
+            </div>
+        </section>
+
         <!-- CTA Section -->
         <section class="relative h-[400px] flex items-center justify-center text-center overflow-hidden">
             <div class="absolute inset-0 z-0">
@@ -461,6 +478,7 @@
         </div>
     </footer>
     <script src="js/layout.js"></script>
+    <script src="js/artists.js"></script>
 </body>
 
 </html>
