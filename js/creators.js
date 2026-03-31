@@ -7,7 +7,7 @@ const CREATORS = [
         name: 'KX',
         role: 'Rap, Grime & Drill Specialist',
         showTime: 'Fridays 7PM',
-        image: 'https://images.unsplash.com/photo-1520333789090-1afc82db536a?auto=format&fit=crop&q=80&w=600', // Urban portrait
+        image: 'new-dj-3.jpg', // Urban portrait
         instagram: 'https://instagram.com/kx_official',
         tiktok: 'https://tiktok.com/@kx_beats',
         bio: 'The definition of North East Drill. Bringing the hardest tracks to your ears every week.'
@@ -16,7 +16,7 @@ const CREATORS = [
         name: 'SARA VIBE',
         role: 'Street Culture Reporter',
         showTime: 'Mondays 6PM',
-        image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=600', // Black female creator
+        image: 'sara-vibe.jpg', // Creator portrait
         instagram: 'https://instagram.com/saravibe',
         tiktok: 'https://tiktok.com/@saravibe_clips',
         bio: 'Reporting from the heart of the community. From fashion to social change.'
